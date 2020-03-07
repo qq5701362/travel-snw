@@ -54,7 +54,15 @@ public class UserServiceTest extends TestBase {
 	public void testRegist () {
 		String account = "wanggk";
 		String pswd = "1122";
-		String user_name = "王五";
+		String user_name = "王五6";
+		userService.regist(account, pswd, user_name);
+	}
+	
+	@Test
+	public void testRegist1 () {
+		String account = "wangfx";
+		String pswd = "1122";
+		String user_name = "王五6";
 		userService.regist(account, pswd, user_name);
 	}
 	
