@@ -5,53 +5,52 @@
 	<meta charset="UTF-8">
 	<title>travel</title>
 	<link rel="stylesheet" href="../css/index/nav.css">
+	
+	<script>
+	    function Show(){
+	        document.getElementById('shade').classList.remove('hide');
+	        document.getElementById('modal').classList.remove('hide');
+	    }
+	     function Hide(){
+	        document.getElementById('shade').classList.add('hide');
+	        document.getElementById('modal').classList.add('hide');
+	    }
+	</script>
 </head>
 <body>
  <div class="top">
  	<div ><input class="bt" type="button" value="登录" onclick="Show();">
  	<div id="shade" class="c1 hide"></div>
-<div id="modal" class="c2 hide"></br><img  class="modal-img" src="../images/5268.jpg"  alt="0"/>
-<div class="bg">    
-<div class="log"><p>欢迎登录！</p></div>
- <div ><p>用户：<input class="text" type="text" /></p> </br></div> 
- <div><p>密码：<input  class="password" type="password" /></p></div>
-    
-<p>
-    <input class="log1" type="button" value="登录">
-  <input class="log2" type="button" value="去注册" onclick="Show();">  
-</p>
-<p><input class="cancel" type="button" value="取消" onclick="Hide();"></p>
-</div>
-    </div>
- 
-<script>
-    function Show(){
-        document.getElementById('shade').classList.remove('hide');
-        document.getElementById('modal').classList.remove('hide');
-    }
-     function Hide(){
-        document.getElementById('shade').classList.add('hide');
-        document.getElementById('modal').classList.add('hide');
-    }
-</script>
+	<div id="modal" class="c2 hide"></br><img  class="modal-img" src="../images/5268.jpg"  alt="0"/>
+		<div class="bg">    
+			<div class="log"><p>欢迎登录！</p></div>
+			 <div ><p>用户：<input class="text" type="text" /></p> </br></div> 
+			 <div><p>密码：<input  class="password" type="password" /></p></div>
+			    
+			<p>
+			  <input class="log1" type="button" value="登录">
+			  <input class="log2" type="button" value="注册" onclick="Show();">  
+			</p>
+			<p><input class="cancel" type="button" value="取消" onclick="Hide();"></p>
+		</div>
+ 	</div>
  	</div>
  	
- 	
-                   <center> 
-                    <ul>
-                    <li><a href="mainPage.html">首页</a></li>
-                    <li><a href="../html/introduce.html">三娘湾概况</a></li>
-                    <li><a href="#">路线指南</a><ul>
-                        <li><a href=""> 火车站</a></li>
-                        <li><a href="train.html"> 汽车站</a></li>
-                        </ul></li>
-                    <li><a href="../html/cate.html">美食攻略</a></li>
-                    <li><a href="../html/ticket.html">订票服务</a></li>
-                    <li><a href="#">游客留言</a></li>
-                      
-                    </ul>
-
-                   </center> 
+     <center> 
+	      <ul>
+		      <li><a href="mainPage.html">首页</a></li>
+		      <li><a href="../html/introduce.html">三娘湾概况</a></li>
+		      <li><a href="#">路线指南</a>
+		      	<ul>
+		          <li><a href=""> 火车站</a></li>
+		          <li><a href="train.html"> 汽车站</a></li>
+		        </ul>
+		      </li>
+		      <li><a href="../html/cate.html">美食攻略</a></li>
+		      <li><a href="../html/ticket.html">订票服务</a></li>
+		      <li><a href="#">游客留言</a></li>
+	      </ul>
+     </center> 
 
   </div>
   <div class="north"><h2>1.钦州北站</h2></div>
