@@ -1,0 +1,460 @@
+
+body{
+margin-left: auto;
+margin-right: auto;
+width:1350px;
+height:3050px;
+background-color:rgb(150,180,255); 
+}
+.top{
+    /* 设置宽度高度背景颜色 */
+    height: 80px; /*高度改为自动高度*/
+    width:1350px;
+    margin-left: 0;
+    background:rgb(30, 144, 255);
+    top: 0;/*离顶部的距离为0*/
+    margin-bottom: 15px;
+    z-index:99;
+}
+.top ul{
+    /* 清除ul标签的默认样式 */
+    width: auto;/*宽度也改为自动*/
+    list-style-type: none;
+    white-space:nowrap;
+    overflow: hidden;
+    margin-left: 8%;
+    /* margin-top: 0;          */
+    padding: 0;
+
+}
+.top li {
+    float:left; /* 使li内容横向浮动，即横向排列  */
+    margin-right:4%;  /* 两个li之间的距离*/
+    position: relative;
+    overflow: hidden;
+}
+
+.top li a{
+   /* 设置链接内容显示的格式*/
+    display: block; /* 把链接显示为块元素可使整个链接区域可点击 */
+    color:white;
+    text-align: center;
+    padding: 0px;
+    overflow: hidden;
+    text-decoration: none; /* 去除下划线 */
+    font-size: 20px;
+    margin-top: 20px;
+}
+.top li a:hover{
+    /* 鼠标选中时背景变为黑色 */
+    background-color: #111;
+}
+.top ul li ul{
+    /* 设置二级菜单 */
+    margin-left: 0px;
+    background:rgb(30, 144, 255);
+   /*position: relative;*/
+    display: none; /* 默认隐藏二级菜单的内容 */
+     /*text-align: center;*/
+    width:80px;
+    height:100px;
+}
+.top ul li ul li{
+    /* 二级菜单li内容的显示 */
+    margin-left:0px;
+    text-align: center;
+}
+.top ul li:hover ul{
+    /* 鼠标选中二级菜单内容时 */
+    display: block;
+
+}
+/*登录*/
+.bt{
+	color: black;
+	font-size: 15px;
+	height: 35px;
+	width:55px;
+	line-height:30px;
+	margin-top: 30px;
+	float: right;
+	margin-right: 100px;
+
+}
+  .hide{
+            display: none;
+        }
+        .c1{
+            position: fixed;
+            top:0;
+            bottom: 0;
+            left:0px;
+            right: 0;
+            background: rgba(0,0,0,.5);
+            z-index: 2;
+        }
+        .c2{
+            
+            position: fixed;
+            width: 400px;
+            height: 300px;
+            top:50%;
+            left: 50%;
+            z-index: 3;
+            margin-top: -150px;
+            margin-left: -200px;
+            
+
+        }
+        .modal-img{
+        width: 400px;
+        height: 300px;
+        
+        
+        }
+        .bg{
+        width: 400px;
+        height: 300px;
+        background:yellow;
+        margin-top: -304px;
+        }
+		#modal p {
+			margin-left:80px;
+		}
+		.text{
+		font-size: 20px;
+		width: 180px;
+        height: 30px;
+        border-radius: 10px; 
+		}
+		.password{
+		font-size: 20px;
+		width: 180px;
+        height: 30px;
+        border-radius: 10px; 
+		}
+		.log{
+		font-size: 25px;
+		margin-left: 70px;
+		}
+		
+        .log1{
+        margin-left: 50px;
+        font-size: 15px;
+        }		
+        .log2{
+          margin-left: 10px;
+          font-size: 15px;
+        }
+        .cancel{
+        margin-left: 180px;
+        font-size: 15px;
+        }
+/*注册*/
+
+
+		
+.pic{
+ width:1350px;
+ height:360px;
+ overflow: hidden;
+ position:relative;
+ margin:0 auto;
+ float: none;
+ margin-top: 0px;
+ z-index: -1; 
+
+}
+.img{
+    width:1350px;
+    height:330px;
+ 
+}
+.middle{
+ width:1350px;
+ height:1090px; 
+ overflow: hidden;
+ position:relative;
+ background-color: yellow;
+ margin-top: -15px;
+}
+.lunbo{
+ width:1350px;
+ height:320px; 
+ overflow: hidden;
+ position:relative;
+ margin-left: 0px;
+ /*background-color: red;*/
+ float: left;
+}
+*{
+ padding:0;
+ margin:0;
+ }
+ .container{
+ width:550px;
+ height:320px;
+ overflow: hidden;
+ position:relative;
+ margin:0 auto;
+ float: none;
+ margin-top: 0px;
+ margin-left: 410px;
+ }
+ .list{
+ width:2750px;
+ height:320px;
+ position:absolute;
+ 
+ }
+ .list>img{
+ float:left;
+ width:550px;
+ height:320px;
+ }
+ .pointer{
+ position:absolute;
+ width:100px;
+ bottom:20px;
+ left:230px;
+ 
+ }
+ .pointer>span{
+ cursor:pointer;
+ display:inline-block;
+ width:10px;
+ height:10px;
+ background: #7b7d80;
+ border-radius:50%;
+ border:1px solid #fff;
+ }
+ .pointer .on{
+ background: #28a4c9;
+ }
+ .arrow{
+ position:absolute;
+ text-decoration:none;
+ width:40px;
+ height:40px;
+ background: #727d8f;
+ color:#fff;
+ font-weight: bold;
+ line-height:40px;
+ text-align:center;
+ top:180px;
+ display:none;
+ }
+ .arrow:hover{
+ background: #0f0f0f;
+ }
+ .left{
+ left:0;
+ }
+ .right{
+ right:0;
+ }
+ .container:hover .arrow{
+ display:block;
+ }
+.snwtravel{
+ width: 320px;
+ height: 320px;
+ background-color: rgb(30, 144, 255);
+ float: left;
+ margin-top: 0px;
+ overflow: hidden;
+ position:relative;
+ margin-left: 50px;
+}
+.snwtravel2 a{
+   /* 设置链接内容显示的格式*/
+    display: block; /* 把链接显示为块元素可使整个链接区域可点击 */
+    color:white;
+    text-align: center;
+    padding: 0px;
+    overflow: hidden;
+    text-decoration: none; /* 去除下划线 */
+    font-size: 25px;
+    margin-top: 10px;
+    padding:10px;
+}
+.snwtravel1{
+    font-size: 30px;
+    text-align: center;
+    overflow: hidden;
+
+}
+.information{
+    width: 320px;
+    height: 320px;
+    background-color: white;
+    margin-right: 30px;
+    float: right;
+    overflow: hidden;
+ position:relative;
+}
+.information1{
+    font-size: 30px;
+    text-align: center;
+    overflow: hidden;
+}
+.information2 a{
+    display: block; /* 把链接显示为块元素可使整个链接区域可点击 */
+    color:black;
+    text-align: left;
+    padding: 0px;
+    overflow: hidden;
+    text-decoration: none; /* 去除下划线 */
+    font-size: 15px;
+    margin-top: 10px;
+    padding:3px;
+
+}
+.introduce{
+    width: 1350px;
+    height: 80px;
+    background: rgb(20, 100, 255);
+    margin-top: 330px;
+    font-size: 30px;
+    color: white;
+    overflow: hidden;
+    position:relative;
+     list-style-type: none;
+    white-space:nowrap;
+
+}
+.introduce1{
+    font-size: 30px;
+    color: white;
+    margin-left: 20px;
+    overflow: hidden;
+    text-decoration: none; /* 去除下划线 */
+    margin-top: 15px;
+}
+.scenic{
+    width: 1350px;
+    height:300px;
+    background: white;
+    margin-top: 10px;
+}
+
+.scenic1{
+    width: 200px;
+    height: 280px;
+    float: left;
+    border: rgb(217,217,217) solid 1px;
+    background-color: rgb(245,245,245);
+    left: 10px;
+    margin-left:20px;
+}
+.scenic1-img{
+   width: 200px;
+   height: 130px; 
+}
+.scenic1-1{
+    width: 200px;
+    height: 140px;
+    background: blue;
+    border: rgb(217,217,217) solid 1px;
+
+}
+
+.scenic1-1-img{
+    width: 200px;
+    height: 115px;
+    margin-left: 0px;
+}
+.scenic1-1-desc{
+    font-size: 15px;
+    margin-left: 40px;
+}
+.scenic1-2{
+    width: 200px;
+    height: 140px;
+    background: green;
+    border: rgb(217,217,217) solid 1px;
+}
+.last{
+    width: 1350px;
+    height: 350px;
+    background: green;
+    
+
+}
+.characteristic{
+    width: 656px;
+    height: 350px;
+    background: red;
+    float: left;
+    border: rgb(217,217,217) solid 1px;
+    left: 10px;
+    margin-left:10px;
+}
+.cate{
+    width: 656px;
+    height: 70px;
+    background: rgb(20, 100, 255);
+}
+.cate1 {
+    font-size: 30px;
+    margin-left: 10px;
+    overflow: hidden;
+    list-style-type: none;
+    size: center;
+}
+
+.cate2{
+    width: 160px;
+    height: 280px;
+    float: left;
+    border: rgb(217,217,217) solid 1px;
+    left: 0px;
+    margin-left:2px;
+     
+}
+.cate2-1{
+    width: 160px;
+    height: 180px;
+    margin:10px auto;
+}
+.cate2-1-img{
+    width: 160px;
+    height: 150px;
+    border-radius:50%;
+}
+
+ 
+.cate2-1-desc{
+  width: 160px;
+  height:100px;  
+}
+.Homestay-title{
+  width: 656px;
+  height:70px;
+  background: blue;  
+  
+}
+.Homestay-title1{
+   font-size: 30px;
+    margin-left: 10px;
+    overflow: hidden;
+    list-style-type: none;
+    size: center; 
+}
+.Homestay{
+    width: 160px;
+    height: 280px;
+    float: left;
+    border: rgb(217,217,217) solid 1px;
+    left: 0px;
+    margin-left:2px;
+}
+.Homestay-img{
+    width: 160px;
+    height:220px;
+}
+.bottom{
+width:1350px;
+height:200px;
+background:black;
+}

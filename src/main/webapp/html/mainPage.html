@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>travel</title>
+	<link rel="stylesheet" href="../css/index/mainpage.css">
+</head>
+<body>
+ <div class="top">
+ 	<div ><input class="bt" type="button" value="登录" onclick="Show();">
+ 	<div id="shade" class="c1 hide"></div>
+<div id="modal" class="c2 hide"></br><img  class="modal-img" src="../images/5268.jpg"  alt="0"/>
+<div class="bg">   
+<div class="log"><p>欢迎登录！</p></br></div>
+ <div ><p>用户：<input class="text" type="text" /></p></div> </br></br>
+ <div><p>密码：<input  class="password" type="password" /></p></div> </br>
+    
+<p>
+    <input class="log1" type="button" value="登录">
+  <input class="log2" type="button" value="去注册" onclick="Show();">  
+</p></br>
+<p><input class="cancel" type="button" value="取消" onclick="Hide();"></p>
+</div>
+    </div>
+ 
+<script>
+    function Show(){
+        document.getElementById('shade').classList.remove('hide');
+        document.getElementById('modal').classList.remove('hide');
+    }
+     function Hide(){
+        document.getElementById('shade').classList.add('hide');
+        document.getElementById('modal').classList.add('hide');
+    }
+</script>
+ 	</div>
+ 	
+                   <center> 
+                    <ul>
+                    <li><a href="mainPage.html">首页</a></li>
+                    <li><a href="../html/introduce.html">三娘湾概况</a></li>
+                    <li><a href="#">路线指南</a><ul>
+                        <li><a href="train.html"> 火车站</a></li>
+                        <li><a href=""> 汽车站</a></li>
+                        </ul></li>
+                    <li><a href="../html/cate.html">美食攻略</a></li>
+                    <li><a href="../html/ticket.html">订票服务</a></li>
+                    <li><a href="#">游客留言</a></li>
+                      
+                    </ul>
+
+                   </center> 
+
+  </div>
+  <div class="pic">
+  <img  class="img" src="../images/jdc7.jpg"  alt="0"/>
+  </div>
+  <div class=middle><!--中间部分总体-->
+    <div class="lunbo">
+      <div class="snwtravel">
+   <ul>
+            <li class="snwtravel1">三娘湾旅游</li>
+            <hr style="height:1px;border:none;border-top:1px solid #555555;" />
+            <li class="snwtravel2"><a href="#">节庆活动</a></li>
+            <li class="snwtravel2"><a href="#">旅游贴士</a></li>
+            <li class="snwtravel2"><a href="#">当地特产</a></li>
+            <li class="snwtravel2"><a href="#">图片</a></li>
+        </ul>
+ </div>
+ <div class="information">
+   <ul>
+            <li class="information1">最新资讯</li>
+            <hr style="height:1px;border:none;border-top:1px solid #555555;" />
+            <li class="information2"><a href="#">>三娘湾旅游最新资讯</a></li>
+            <li class="information2"><a href="#">>什么时候来最容易遇见白海豚</a></li>
+            <li class="information2"><a href="#">>最值得去品尝的特产</a></li>
+            <li class="information2"><a href="#">>三娘湾景区四季景色</a></li>
+            <li class="information2"><a href="#">>更多新资讯</a></li>
+        </ul>
+ </div>
+<div class="container">
+
+ <div class="list" style="left:0px;">
+ <!--<img src="../static/image/photo1.jpg" alt="5"/>-->
+ <img src="../images/IMG_4069.jpg" alt="1"/>
+ <img src="../images/IMG_3918.jpg" alt="2"/>
+ <img src="../images/IMG_4003.jpg" alt="3"/>
+ <img src="../images/IMG_3998.jpg" alt="4"/>
+ <img src="../images/IMG_4036.jpg" alt="5"/>
+ <!--<img src="../static/image/banner.jpg" alt="1"/>-->
+ </div>
+ <div class="pointer">
+ <span index="1" class="on"></span>
+ <span index="2"></span>
+ <span index="3"></span>
+ <span index="4"></span>
+ <span index="5"></span>
+ </div>
+<!--<a href="#" rel="external nofollow" rel="external nofollow" class="arrow left">></a>
+ <a href="#" rel="external nofollow" rel="external nofollow" class="arrow right"><</a>-->
+</div>
+<script src="../js/jq/jquery-3.4.1.min.js"></script>
+ <script>
+ var imgCount = 5;
+ var index = 1;
+ var intervalId;
+ var buttonSpan = $('.pointer')[0].children;//htmlCollection 集合
+ //自动轮播功能 使用定时器
+ autoNextPage();
+ function autoNextPage(){
+ intervalId = setInterval(function(){
+ nextPage(true);
+ },2750);
+ }
+ //当鼠标移入 停止轮播
+ $('.container').mouseover(function(){
+ console.log('hah');
+ clearInterval(intervalId);
+ });
+ // 当鼠标移出，开始轮播
+ $('.container').mouseout(function(){
+ autoNextPage();
+ });
+ //点击下一页 上一页的功能
+ $('.left').click(function(){
+ nextPage(true);
+ });
+ $('.right').click(function(){
+ nextPage(false);
+ });
+ //小圆点的相应功能 事件委托
+ clickButtons();
+ function clickButtons(){
+ var length = buttonSpan.length;
+ for(var i=0;i<length;i++){
+ buttonSpan[i].onclick = function(){
+  $(buttonSpan[index-1]).removeClass('on');
+  if($(this).attr('index')==1){
+  index = 5;
+  }else{
+  index = $(this).attr('index')-1;
+  }
+  nextPage(true);
+ 
+ };
+ }
+ }
+ function nextPage(next){
+ var targetLeft = 0;
+ //当前的圆点去掉on样式
+ $(buttonSpan[index-1]).removeClass('on');
+ if(next){//往后走
+ if(index == 5){//到最后一张，直接跳到第一张
+  targetLeft = 0;
+  index = 1;
+ }else{
+  index++;
+  targetLeft = -550*(index-1);
+ }
+ 
+ }else{//往前走
+ if(index == 1){//在第一张，直接跳到第五张
+  index = 5;
+  targetLeft = -550*(imgCount-1);
+ }else{
+  index--;
+  targetLeft = -550*(index-1);
+ }
+ 
+ }
+ $('.list').animate({left:targetLeft+'px'});
+ //更新后的圆点加上样式
+ $(buttonSpan[index-1]).addClass('on');
+ 
+ 
+ }
+ 
+ 
+ </script>
+
+</div>
+<div class="introduce">
+<li class="introduce1">景区景点</li>  
+</div>
+<div class="scenic">
+<div class="scenic1"><a href="#">
+<img  class="scenic1-img" src="../images/IMG_3918.jpg"  alt="0"/></a>
+<div  class="scenic1-desc"><a href="#">
+    01.三娘湾沿岸月亮沙滩长约1.5公里，掩映在椤麻防风林中的海滩呈金黄色，松软细腻;紧傍三娘湾的渔村里鸡鸣犬吠，炊烟袅袅，让人领略到与都市旅游迥然不同的野趣。</a>
+</div>
+</div>
+<div class="scenic1">
+<div class="scenic1-1">
+<a href="#">
+<img class="scenic1-1-img" src="../images/Nfdko.jpg"  alt="0"/></a>
+<div class="scenic1-1-desc"><a href="#">02.三娘石</a></div>
+</div>
+<div class="scenic1-2">
+ <a href="#">
+<img class="scenic1-1-img" src="../images/shuiguai.jpg"  alt="0"/></a>
+<div class="scenic1-1-desc"><a href="#">03.海狗石</a></div> 
+</div>
+</div>
+<div class="scenic1">
+<div class="scenic1-1">
+<a href="#">
+<img class="scenic1-1-img" src="../images/mthumb.jpg"  alt="0"/></a>
+<div class="scenic1-1-desc"><a href="#">04.海霞石</a></div>
+</div>
+<div class="scenic1-2">
+ <a href="#">
+<img class="scenic1-1-img" src="../images/20e97.jpg"  alt="0"/></a>
+<div class="scenic1-1-desc"><a href="#">05.中华白海豚</a></div> 
+</div>
+</div>
+<div class="scenic1">
+  <div class="scenic1-1">
+<a href="#">
+<img class="scenic1-1-img" src="../images/ccb90.jpg"  alt="0"/></a>
+<div class="scenic1-1-desc"><a href="#">06.清心园</a></div>
+</div>
+<div class="scenic1-2">
+ <a href="#">
+<img class="scenic1-1-img" src="../images/fb16.jpg"  alt="0"/></a>
+<div class="scenic1-1-desc"><a href="#">07.海滩防护林</a></div>
+</div>
+</div>
+<div class="scenic1">
+    <div class="scenic1-1">
+<a href="#">
+<img class="scenic1-1-img" src="../images/1114b.jpg"  alt="0"/></a>
+<div class="scenic1-1-desc"><a href="#">08.风情鱼村</a></div>
+</div>
+<div class="scenic1-2">
+ <a href="#">
+<img class="scenic1-1-img" src="../images/IMG_4052.jpg"  alt="0"/></a>
+<div class="scenic1-1-desc"><a href="#">09.观潮台</a></div> 
+</div>
+</div>
+<div class="scenic1">
+  <div class="scenic1-1">
+    <a href="#">
+<img class="scenic1-1-img" src="../images/IMG_4030.jpg"  alt="0"/></a>
+<div class="scenic1-1-desc"><a href="#">10.海水浴场</a></div>
+  </div>
+  <div class="scenic1-2">
+<img class="scenic1-1-img" src="../images/40127.jpg"  alt="0"/></a>
+<div class="scenic1-1-desc"><a href="#">11.乌雷岭伏波庙</a></div> 
+  </div>
+</div>
+</div>
+<div class="last">
+<div class="characteristic">
+<div class="cate">
+<li class="cate1">特色产品</li>
+</div>
+<div class="cate2">
+  <div class="cate2-1">
+  <img class="cate2-1-img" src="../images/IMG_3958.jpg"  alt="0"/></a>
+</div> 
+<div class="cate2-1-desc">新鲜海鲜：三湾螺、海葵、大耗、对虾、石斑鱼等</div>
+</div>
+<div class="cate2">
+<div class="cate2-1">
+<img class="cate2-1-img" src="../images/IMG_3941.jpg"  alt="0"/></a>
+</div> 
+<div class="cate2-1-desc">海干货：海鸭蛋、鱿鱼干、虾干、鳗鱼干、黄鱼干等</div>
+</div>  
+<div class="cate2">
+<div class="cate2-1">
+<img class="cate2-1-img" src="../images/IMG_4018.jpg"  alt="0"/></a>
+</div> 
+<div class="cate2-1-desc">工艺品：泥兴陶、贝壳工艺品等</div>
+</div>  
+<div class="cate2">
+<div class="cate2-1">
+<img class="cate2-1-img" src="../images/1926.jpg"  alt="0"/></a>
+</div> 
+<div class="cate2-1-desc">水果：荔枝、芒果、番石榴等</div>
+</div>    
+</div>
+<div class="characteristic">
+<div class="Homestay-title">
+ <li class="Homestay-title1">特色民宿-渔家风情</li> 
+</div>
+<div class="Homestay">
+<img class="Homestay-img" src="../images/IMG_3942.jpg"  alt="0"/>
+</div>
+<div class="Homestay">
+<img class="Homestay-img" src="../images/IMG_3956.jpg"  alt="0"/>
+</div>
+<div class="Homestay">
+<img class="Homestay-img" src="../images/fangzi.jpg"  alt="0"/>
+</div>
+<div class="Homestay">
+<img class="Homestay-img" src="../images/IMG_4036.jpg"  alt="0"/>
+</div>
+
+</div>
+</div>
+</div>
+<div class="bottom">
+
+</div>
+</body>
+</html>
