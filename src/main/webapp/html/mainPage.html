@@ -10,52 +10,29 @@
 	<script type="text/javascript" src="../easyui/jquery.easyui.min.js"></script>
 	<script type="text/javascript" src="../js/mainPage.js"></script>
 	<script>
-	    /**function show(){
-	        document.getElementById('mainPage_shade').classList.remove('hide');
-	        document.getElementById('mainPage_modal').classList.remove('hide');
-	    }
-	     function hide(){
-	        document.getElementById('mainPage_shade').classList.add('hide');
-	        document.getElementById('mainPage_modal').classList.add('hide');
-	    }*/
+	function Show(){
+        document.getElementById('shade').classList.remove('hide');
+        document.getElementById('modal').classList.remove('hide');
+    }
+     function Hide(){
+        document.getElementById('shade').classList.add('hide');
+        document.getElementById('modal').classList.add('hide');
+    }
+     function Show1(){
+         document.getElementById('shade1').classList.remove('hide');
+         document.getElementById('modal1').classList.remove('hide');
+     }
+      function Hide1(){
+         document.getElementById('shade1').classList.add('hide');
+         document.getElementById('modal1').classList.add('hide');
+     }
 	</script>
 </head>
 
 <body>
 	<div class="top">
- 		<div ><input id="mainPage_index" class="bt" type="button" value="登录" >
- 			<div id="mainPage_shade" class="c1 hide"></div>
-			<div id="mainPage_modal" class="c2 hide"></br><img  class="modal-img" src="../images/5268.jpg"  alt="0"/>
-			
-				<div id="mainPage_loginIndex" class="bg">   
-					<dt><div class="log"><p>欢迎登录！</p></br></div></dt>
- 					<dt>
-						<div class='letter' style='margin-left:50px;'>
-							用户名:&nbsp;<input type="text" name="" id="count" tabindex='1'/>
-							<span id="count_span"></span>
-						</div>
-					</dt>
-					<br/><br/>
-					<dt>
-						<div class='letter' style='margin-left:50px;'>
-							密&nbsp;&nbsp;&nbsp;码:&nbsp;<input type="password" name="" id="password" tabindex='2'/>
-							<span id="password_span"></span>
-						</div>
-					</dt>
-    				<dt>
-						<p>
-		    				<input id="mainPage_login" style='margin-left:100px;margin-top:10px' class="log1" type="button" value="登录"/>
-		  					<input id="mainPage_regist" style='margin-left:50px' class="log2" type="button" value="注册"/>  
-		  					<input id="mainPage_cancel" style='margin-left:50px' class="cancel" type="button" value="取消">
-						</p>
-					</dt>
-				</div>
-				
-    		</div>
- 
-
- 		</div>
- 	
+		
+		
          <center> 
 	          <ul>
 		          <li><a href="mainPage.html">首页</a></li>
@@ -72,7 +49,40 @@
 	          </ul>
 
          </center> 
-
+         <div class="mainPage_log">
+	    	<div><input class="bt1" type="button" value="注册" onclick="Show();">
+	    		<div id="shade" class="c1 hide"></div>
+				<div id="modal" class="c2 hide"></br><img  class="modal-img" src="../images/5268.jpg"  alt="0"/>
+					<div class="bg">    
+         				<div class="log"><p>注册</p></br></div>
+ 						<div ><p>用户名：<input class="name" type="name" /></p> </br></div> 
+ 						<div><p>昵称：<input  class="nickname" type="nickname" /></p></br></div>
+     					<div><p>密码：<input  class="password" type="password" /></p></br></div>
+     					<div><p>确认密码：<input  class="conpassword" type="conpassword" /></p></br></div>
+						<p>
+    						<input class="log1" type="button" value="注册">
+  							<input class="cancel" type="button" value="取消" onclick="Hide();">  
+						</p>
+ 							
+					   </div>
+    		  </div>
+	    	</div>
+	    <div><input class="bt2" type="button" value="登录" onclick="Show1();">
+	    	<div id="shade1" class="d1 hide"></div>
+			<div id="modal1" class="d2 hide"></br><img  class="modal-img" src="../images/5268.jpg"  alt="0"/>
+				<div class="bg1">    
+         			<div class="log2"><p>欢迎登录！</p></br></div>
+ 					<div ><p>用户：<input class="text" type="text" /></p> </br></div> 
+ 					<div><p>密码：<input  class="password1" type="password1" /></p></br></div>
+    
+					<p>
+    					<input class="log3" type="button" value="登录">
+  						<input class="cancel1" type="button" value="取消" onclick="Hide1();">
+ 					</p>
+				</div>
+    		</div>
+ 	    </div>
+		 </div>
  	</div>
   	<div class="pic">
   		<img  class="img" src="../images/jdc7.jpg"  alt="0"/>

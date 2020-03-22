@@ -16,6 +16,193 @@ background-color:rgb(150,180,255);
     margin-bottom: 15px;
     z-index:99;
 }
+
+center{
+	height: 80px; /*高度改为自动高度*/
+    width:1150px;
+    background:red;
+    position:absolute;
+}
+
+.mainPage_log{
+	height: 80px; /*高度改为自动高度*/
+    width:200px;
+    background:yellow;
+    
+    margin-left:1150px;
+}
+.bt1{
+	color: black;
+	font-size: 15px;
+	height: 35px;
+	width:55px;
+	line-height:30px;
+	margin-top: 30px;
+	float: left;
+	margin-left: 0px;
+	position:absolute;
+	display:inline-block;
+}
+.bt2{
+	color: black;
+	font-size: 15px;
+	height: 35px;
+	width:55px;
+	line-height:30px;
+	margin-top: 30px;
+	float: left;
+	margin-left: 100px;
+	position:absolute;
+	display:inline-block;
+}
+/*注册*/
+.hide{
+            display: none;
+        }
+        .c1{
+            position: fixed;
+            top:0;
+            bottom: 0;
+            left:0px;
+            right: 0;
+            background: rgba(0,0,0,.5);
+            z-index: 2;
+        }
+        .c2{
+            
+            position: fixed;
+            width: 400px;
+            height: 300px;
+            top:50%;
+            left: 50%;
+            z-index: 3;
+            margin-top: -150px;
+            margin-left: -200px;
+            
+
+        }
+        .modal-img{
+        width: 400px;
+        height: 300px;
+        
+        
+        }
+        .bg{
+        width: 400px;
+        height: 300px;
+        background:yellow;
+        margin-top: -304px;
+        }
+		#modal p {
+			margin-left:80px;
+		}
+		.name{
+		font-size: 15px;
+		width: 180px;
+        height: 20px;
+        border-radius: 5px; 
+		}
+		.nickname{
+		font-size: 15px;
+		width: 180px;
+        height: 20px;
+        border-radius: 5px; 
+		}
+		.password{
+		font-size: 15px;
+		width: 180px;
+        height: 20px;
+        border-radius: 5px; 
+		}
+		.conpassword{
+		font-size: 15px;
+		width: 180px;
+        height: 20px;
+        border-radius: 5px; 
+		}
+		.log{
+		font-size: 25px;
+		margin-left: 70px;
+		}
+		
+        .log1{
+        margin-left: 80px;
+        font-size: 15px;
+        }		
+        .cancel{
+        margin-left: 70px;
+        font-size: 15px;
+        }
+/*登录*/
+ .hide{
+            display: none;
+        }
+        .d1{
+            position: fixed;
+            top:0;
+            bottom: 0;
+            left:0px;
+            right: 0;
+            background: rgba(0,0,0,.5);
+            z-index: 2;
+        }
+        .d2{
+            
+            position: fixed;
+            width: 400px;
+            height: 300px;
+            top:50%;
+            left: 50%;
+            z-index: 3;
+            margin-top: -150px;
+            margin-left: -200px;
+            
+
+        }
+        .modal-img{
+        width: 400px;
+        height: 300px;
+        
+        
+        }
+        .bg1{
+        width: 400px;
+        height: 300px;
+        background:yellow;
+        margin-top: -304px;
+        }
+		#modal p {
+			margin-left:80px;
+		}
+		.text{
+		font-size: 15px;
+		width: 180px;
+        height: 20px;
+        border-radius: 5px; 
+		}
+		
+		.password1{
+		font-size: 15px;
+		width: 180px;
+        height: 20px;
+        border-radius: 5px; 
+		}
+		
+		.log2{
+		font-size: 25px;
+		margin-left: 70px;
+		}
+		
+        .log3{
+        margin-left: 80px;
+        font-size: 15px;
+        }		
+        .cancel1{
+        margin-left: 70px;
+        font-size: 15px;
+        }
+
+
 .top ul{
     /* 清除ul标签的默认样式 */
     width: auto;/*宽度也改为自动*/
@@ -70,86 +257,7 @@ background-color:rgb(150,180,255);
 
 }
 /*登录*/
-.bt{
-	color: black;
-	font-size: 15px;
-	height: 35px;
-	width:55px;
-	line-height:30px;
-	margin-top: 30px;
-	float: right;
-	margin-right: 100px;
 
-}
-  .hide{
-            display: none;
-        }
-        .c1{
-            position: fixed;
-            top:0;
-            bottom: 0;
-            left:0px;
-            right: 0;
-            background: rgba(0,0,0,.5);
-            z-index: 2;
-        }
-        .c2{
-            
-            position: fixed;
-            width: 400px;
-            height: 300px;
-            top:50%;
-            left: 50%;
-            z-index: 3;
-            margin-top: -150px;
-            margin-left: -200px;
-            
-
-        }
-        .modal-img{
-        width: 400px;
-        height: 300px;
-        
-        
-        }
-        .bg{
-        width: 400px;
-        height: 300px;
-        background:yellow;
-        margin-top: -304px;
-        }
-		#modal p {
-			margin-left:80px;
-		}
-		.text{
-		font-size: 20px;
-		width: 180px;
-        height: 30px;
-        border-radius: 10px; 
-		}
-		.password{
-		font-size: 20px;
-		width: 180px;
-        height: 30px;
-        border-radius: 10px; 
-		}
-		.log{
-		font-size: 25px;
-		margin-left: 70px;
-		}
-		
-        .log1{
-        margin-left: 50px;
-        font-size: 15px;
-        }		
-        .log2{
-          margin-left: 10px;
-          font-size: 15px;
-        }
-        .cancel{
-        margin-left: 180px;
-        font-size: 15px;
-        }
 /*注册*/
 
 
