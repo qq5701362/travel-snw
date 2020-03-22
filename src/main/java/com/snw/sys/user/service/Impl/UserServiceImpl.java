@@ -29,21 +29,21 @@ public class UserServiceImpl implements UserService {
 
         //参数格式校验
         if(account==null || account.trim().isEmpty()){
-            throw new NameException("用户名不能为�?");
+            throw new NameException("用户名不能为空");
         }
         
         if(pswd==null || pswd.trim().isEmpty()){
             throw new PasswordException("密码不能为空");
         }
-        //密码�?�?
+        //密码�?�?
         User user=userDao.findUserByName(account);
         if(user==null){
-            throw new NameException("用户名错�?");
+            throw new NameException("用户名错误");
         }
-        System.out.println("数据库拿到的密码�?"+user.getPswd());
-        System.out.println("原始密码�?"+pswd);
+        System.out.println("数据库拿到的密码为："+user.getPswd());
+        System.out.println("原始密码为"+pswd);
         String md5Password=NoteUtil.md5(pswd);
-        System.out.println("加密密码�?"+md5Password);
+        System.out.println("加密密码为："+md5Password);
         if(user.getPswd().equals(md5Password)){
             return user;
         }else{
@@ -64,7 +64,7 @@ public class UserServiceImpl implements UserService {
      */
     public User regist(String account, String pswd, String user_name) throws NameException, PasswordException {
 
-        //�?测用户名是否存在
+        //�?测用户名是否存在
         User user=userDao.findUserByName(account);
         if(user!=null){
             throw new NameException("用户名被占用");

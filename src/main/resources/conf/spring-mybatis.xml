@@ -22,8 +22,9 @@
 		<property name="password" value="root"></property>
 		<property name="driverClassName" value="com.mysql.jdbc.Driver"></property>
 		<property name="url"
-			value="jdbc:mysql:///travel_snw"></property>
+			value="jdbc:mysql://localhost:3306/travel_snw?characterEncoding=utf-8&amp;serverTimezone=UTC&amp;useSSL=false"></property>
 	</bean>
+	<!--  jdbc:mysql://localhost:3306/travel_snw?characterEncoding=utf-8&amp;serverTimezone=UTC&amp;useSSL=fals   -->
 	<!-- 配置sqlSessionFactory -->
 	<bean id="ssf" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="dbcp"></property>
