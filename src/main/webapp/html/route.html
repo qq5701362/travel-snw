@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>travel</title>
+	<link rel="stylesheet" href="../css/index/nav.css">
+	
+	<script>
+	    function Show(){
+	        document.getElementById('shade').classList.remove('hide');
+	        document.getElementById('modal').classList.remove('hide');
+	    }
+	     function Hide(){
+	        document.getElementById('shade').classList.add('hide');
+	        document.getElementById('modal').classList.add('hide');
+	    }
+	</script>
+</head>
+<body>
+ <div class="top">
+ 	<div ><input class="bt" type="button" value="登录" onclick="Show();">
+ 	<div id="shade" class="c1 hide"></div>
+	<div id="modal" class="c2 hide"></br><img  class="modal-img" src="../images/5268.jpg"  alt="0"/>
+		<div class="bg">    
+			<div class="log"><p>欢迎登录！</p></div>
+			 <div ><p>用户：<input class="text" type="text" /></p> </br></div> 
+			 <div><p>密码：<input  class="password" type="password" /></p></div>
+			    
+			<p>
+			  <input class="log1" type="button" value="登录">
+			  <input class="log2" type="button" value="注册" onclick="Show();">  
+			</p>
+			<p><input class="cancel" type="button" value="取消" onclick="Hide();"></p>
+		</div>
+ 	</div>
+ 	</div>
+ 	
+     <center> 
+	      <ul>
+		      <li><a href="mainPage.html">首页</a></li>
+		      <li><a href="../html/introduce.html">三娘湾概况</a></li>
+		      <li><a href="#">路线指南</a>
+		      	<ul>
+		          <li><a href="route.html"> 火车站</a></li>
+		          <li><a href="route.html"> 汽车站</a></li>
+		        </ul>
+		      </li>
+		      <li><a href="../html/cate.html">美食攻略</a></li>
+		      <li><a href="../html/ticket.html">订票服务</a></li>
+		      <li><a href="#">游客留言</a></li>
+	      </ul>
+     </center> 
+
+  </div>
+  <div class="north"><h2>1.钦州火车西站</h2></div>
+  <div class="route1">
+  	<div class="map1"><img  class="map1-img" src="../images/ditu1.PNG"  alt="0"/></div>
+  	<div class="route1-1">
+  		<p>公交：</p>
+  		<p>港城3路>>港区5路（全程约1小时30分）火车西站公交站上车>金鼓路口公交站下(换乘港区5路)>三娘湾管理区公交站下</p>
+  		<p>港城2路>>港区5路（全程约1小时41分）火车西站公交站上车>扬帆坭兴路口公交站下(换乘港区5路)>三娘湾管理区公交站下</p>
+  		<p>20路>>港区5路（全程约1小时47分）火车西站公交站上车>金海湾东路口公交站下(换乘港区5路)>三娘湾管理区公交站下</p>
+  		<p>20路>>港区5路（全程约1小时47分）火车西站公交站上车>南珠扬帆路北口公交站下(换乘港区5路)>三娘湾管理区公交站下</p>
+  	</div>
+  </div>
+  <div class="east"><h2>2.钦州东站</h2></div>
+  <div class="route2">
+  	<div class="map2"><img  class="map1-img" src="../images/ditu1.PNG"  alt="0"/></div>
+  	<div class="route1-2"> 
+  		<p>公交：</p>
+  		<p>港城5路（全程约1小时22分）钦州东站公交站上车>三娘湾管理区公交站下</p>
+  		<p>港城1路>>港区3路（全程约1小时41分）钦州东站公交站上车>钦州港枢纽站公交站下(换乘港区3路)>三娘湾管理区公交站下</p>
+  	</div>
+  </div>
+  <div class="south"><h2>3.汽车南站</h2></div>
+  <div class="route3">
+  	<div class="map3"><img  class="map3-img" src="../images/ditu1.PNG"  alt="0"/></div>
+  	<div class="route1-3"> 
+  		<p>公交：</p>
+  		<p>港城5路（全程约1小时7分）汽车南站公交站上车>三娘湾管理区公交站下</p>
+  		<p>港城4路>>港区3路（全程约1小时31分）汽车南站公交站上车>金鼓路口公交站下(换乘港区3路)>三娘湾管理区公交站下</p>
+  		<p>港城1路>>港区3路（全程约1小时48分）汽车南站公交站上车>钦州港枢纽站公交站下(换乘港区3路)>三娘湾管理区公交站下</p>
+  	</div>
+  </div>
+  <div class="north"><h2>3.汽车北站</h2></div>
+  <div class="route4">
+  	<div class="map4"><img  class="map4-img" src="../images/ditu1.PNG"  alt="0"/></div>
+  	<div class="route1-4"> 
+  		<p>公交：</p>
+  		<p>3路或1路>>港城5路（全程约1小时7分）汽车北站公交站上车>汽车南站公交站下(换乘港城5路)>三娘湾管理区公交站下</p>
+  		<p>28路>>港城5路（全程约1小时45分）汽车北站公交站上车>市政务中心公交站下>>步行（约3分钟）到市总工会公交站(换乘港区3路)>三娘湾管理区公交站下</p>
+  		<p>中医院定制专线2路>>港城5路（全程约1小时51分）汽车北站公交站上车>火车东站公交站下(换乘港区3路)>三娘湾管理区公交站下</p>
+  	</div>
+  </div>
+  </body>
+</html>
