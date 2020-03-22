@@ -39,8 +39,9 @@
 					<div class="bg">    
          				<div style="margin-left:160px" class="log"><p>注册</p></br></div>
  						<div >
- 							<p style="margin-left:60px">账号：<input id="mainPage_name" class="name" type="name" /></p>
- 							<div class='warning' id='warning_1'><span></span></div>
+ 							<p style="margin-left:60px">账号：<input id="mainPage_name" class="name" type="name" />
+ 								<span id='warning_1'></span>
+ 							</p>
  							</br>
  						</div> 
  						<div>
@@ -48,13 +49,17 @@
  							</br>
  						</div>
      					<div>
-     						<p style="margin-left:60px">密码：<input  id="mainPage_password" class="password" type="password" /></p>
-     						<div class='warning' id='warning_2'><span></span></div>
+     						<p style="margin-left:60px">密码：<input  id="mainPage_password" class="password" type="password" />
+     							<span id='warning_2'></span>
+     						</p>
+     						
      						</br>
      					</div>
      					<div>
-     						<p style="margin-left:28px">确认密码：<input  id="mainPage_conpassword" class="conpassword" type="password" /></p>
-     						<div class='warning' id='warning_3'><span></span></div>
+     						<p style="margin-left:28px">确认密码：<input  id="mainPage_conpassword" class="conpassword" type="password" />
+     							<span id='warning_3'></span>
+     						</p>
+     						
      						</br>
      					</div>
 						<p>
@@ -70,8 +75,17 @@
 				<div id="mainPage_loginModal" class="d2 hide"></br><img  class="modal-img" src="../images/5268.jpg"  alt="0"/>
 					<div class="bg1">    
 	         			<div class="log2"><p style="margin-left:60px">欢迎登录！</p></br></div>
-	 					<div ><p style="margin-left:50px">账号：<input style="margin-left:10px" id="mainPage_loginName" class="text" type="text" /></p> </br></div> 
-	 					<div><p style="margin-left:50px">密码：<input  style="margin-left:10px" id="mainPage_loginPwd" class="password1" type="password1" /></p></br></div>
+	 					<div >
+	 						<p style="margin-left:50px">账号：<input style="margin-left:10px" id="mainPage_loginName" class="text" type="text" />
+	 							<span id="name_span"></span>
+	 							
+	 						</p> </br>
+	 					</div> 
+	 					<div>
+	 						<p style="margin-left:50px">密码：<input  style="margin-left:10px" id="mainPage_loginPwd" class="password1" type="password1" />
+	 						<span id="password_span"></span>
+	 						</p></br>
+	 					</div>
 	    
 						<p>
 	    					<input id="mainPage_login" style="margin-left:120px" class="log3" type="button" value="登录">
@@ -81,7 +95,7 @@
 	    		</div>
 	 	    </div>
 	 	    
-	 	    <div><input style="margin-left:60px;display:none" id="mainPage_signOut" class="bt2" type="button" value="退出" >
+	 	    <div><input id="mainPage_signOut" style="margin-left:60px;display:none" class="bt2" type="button" value="退出" >
 		 </div>
  	</div>
  	
