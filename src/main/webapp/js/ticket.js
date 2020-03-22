@@ -39,8 +39,15 @@ function showWindown(){
  * 提交
  */
 function ticketCommit(){
-
+	debugger;
+	var ticketName = $("#ticket_name").val();
+	if (!ticketName || ticketName.length < 3) {
+		alert("请输入名字后再试！");
+		return;
+	}
 	alert("提交成功");
+	//关闭购票窗口
+	ticketCannel();
 }
 
 
