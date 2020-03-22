@@ -9,28 +9,7 @@
 	<script type="text/javascript" src="../js/jq/jquery-3.4.1.min.js"></script>
 	<script type="text/javascript" src="../easyui/jquery.easyui.min.js"></script>
 	<script type="text/javascript" src="../js/mainPage.js"></script>
-	<script>
-		//打开注册弹框
-		function regist(){
-	        document.getElementById('mainPage_registShade').classList.remove('hide');
-	        document.getElementById('mainPage_registModal').classList.remove('hide');
-	    }
-		 //关闭注册弹框
-	    function cancelRegist(){
-	        document.getElementById('mainPage_registShade').classList.add('hide');
-	        document.getElementById('mainPage_registModal').classList.add('hide');
-	    }
-	   	//打开登陆弹框
-	    function showLogin(){
-	         document.getElementById('mainPage_loginShade').classList.remove('hide');
-	         document.getElementById('mainPage_loginModal').classList.remove('hide');
-	    }
-	   //关闭登陆弹框
-	    function cancelLogin(){
-	         document.getElementById('mainPage_loginShade').classList.add('hide');
-	         document.getElementById('mainPage_loginModal').classList.add('hide');
-	   }
-	</script>
+	
 </head>
 
 <body>
@@ -54,7 +33,7 @@
 
          </center> 
          <div class="mainPage_log">
-	    	<div><input class="bt1" type="button" value="注册" onclick="regist();">
+	    	<div><input id="mainPage_registWindown" class="bt1" type="button" value="注册" >
 	    		<div id="mainPage_registShade" class="c1 hide"></div>
 				<div id="mainPage_registModal" class="c2 hide"></br><img  class="modal-img" src="../images/5268.jpg"  alt="0"/>
 					<div class="bg">    
@@ -64,28 +43,30 @@
      					<div><p style="margin-left:60px">密码：<input  id="mainPage_password" class="password" type="password" /></p></br></div>
      					<div><p style="margin-left:28px">确认密码：<input  id="mainPage_conpassword" class="conpassword" type="conpassword" /></p></br></div>
 						<p>
-    						<input style="margin-left:110px"class="log1" type="button" value="注册">
-  							<input class="cancel" type="button" value="取消" onclick="cancelRegist();">  
+    						<input style="margin-left:110px"class="log1" type="button" value="注册"/>
+  							<input id="mainPage_cancelRegist" class="cancel" type="button" value="取消" />  
 						</p>
  							
 					   </div>
     		  </div>
 	    	</div>
-	    <div><input class="bt2" type="button" value="登录" onclick="showLogin();">
-	    	<div id="mainPage_loginShade" class="d1 hide"></div>
-			<div id="mainPage_loginModal" class="d2 hide"></br><img  class="modal-img" src="../images/5268.jpg"  alt="0"/>
-				<div class="bg1">    
-         			<div class="log2"><p style="margin-left:60px">欢迎登录！</p></br></div>
- 					<div ><p style="margin-left:50px">账号：<input style="margin-left:10px" id="mainPage_loginName" class="text" type="text" /></p> </br></div> 
- 					<div><p style="margin-left:50px">密码：<input  style="margin-left:10px" id="mainPage_loginPwd" class="password1" type="password1" /></p></br></div>
-    
-					<p>
-    					<input id="mainPage_login" style="margin-left:120px" class="log3" type="button" value="登录">
-  						<input id="mainPage_cancel"style="margin-left:50px"class="cancel1" type="button" value="取消" onclick="cancelLogin();">
- 					</p>
-				</div>
-    		</div>
- 	    </div>
+		    <div><input id="mainPage_loginWindown" class="bt2" type="button" value="登录" >
+		    	<div id="mainPage_loginShade" class="d1 hide"></div>
+				<div id="mainPage_loginModal" class="d2 hide"></br><img  class="modal-img" src="../images/5268.jpg"  alt="0"/>
+					<div class="bg1">    
+	         			<div class="log2"><p style="margin-left:60px">欢迎登录！</p></br></div>
+	 					<div ><p style="margin-left:50px">账号：<input style="margin-left:10px" id="mainPage_loginName" class="text" type="text" /></p> </br></div> 
+	 					<div><p style="margin-left:50px">密码：<input  style="margin-left:10px" id="mainPage_loginPwd" class="password1" type="password1" /></p></br></div>
+	    
+						<p>
+	    					<input id="mainPage_login" style="margin-left:120px" class="log3" type="button" value="登录">
+	  						<input id="mainPage_cancelLogin" style="margin-left:50px"class="cancel1" type="button" value="取消" >
+	 					</p>
+					</div>
+	    		</div>
+	 	    </div>
+	 	    
+	 	    <div><input style="margin-left:60px;display:none" id="mainPage_signOut" class="bt2" type="button" value="退出" >
 		 </div>
  	</div>
  	

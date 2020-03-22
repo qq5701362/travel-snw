@@ -1,11 +1,17 @@
 $(function(){
-	//点击右上角登陆按钮，弹出登陆面板
-	$("#mainPage_index").click(showWindown);
 	
-	//绑定登录单击事件
-	$("#mainPage_login").click(loginAction);
-	//绑定注册单击事件
-	$("#mainPage_regist").click(registAction);
+	//打开注册弹框单击事件
+	$("#mainPage_registWindown").click(registWindown);
+	//关闭注册弹框单击事件
+	$("#mainPage_cancelRegist").click(cancelRegist);
+	
+	
+	//打开登录弹框单击事件
+	$("#mainPage_loginWindown").click(showLogin);
+	//关闭登录弹框单击事件
+	$("#mainPage_cancelLogin").click(cancelLogin);
+	
+	
 	
 	//取消按钮
 	$("#mainPage_cancel").click(cancelWindown);
@@ -13,17 +19,40 @@ $(function(){
 })
 
 /**
- * 点击右上角登陆按钮，弹出登陆面板
- */
-function showWindown(){
+ * 打开注册窗口
+ */	
+function registWindown(){
 	debugger;
-	$('#mainPage_modal').show();
+	$("#mainPage_registModal").show();
 }
 
-//取消按钮
-function cancelWindown(){
-	$('#mainPage_modal').hide();
+/**
+ * 关闭注册窗口
+ */	
+function cancelRegist(){
+	debugger;
+	$("#mainPage_registModal").hide();
 }
+
+/**
+ * 打开登录窗口
+ */	
+function showLogin(){
+	debugger;
+	$("#mainPage_loginModal").show();
+}
+
+/**
+ * 关闭登录窗口
+ */	
+function cancelLogin(){
+	debugger;
+	$("#mainPage_loginModal").hide();
+}
+
+
+
+
 
 /**
  * 登陆
@@ -73,9 +102,8 @@ function loginAction(){
 		});
 	}
 }
-/**
- * 注册，跳去另一个
- */		
+
+
 function registAction(){
 	debugger;
 	$("#mainPage_loginIndex").hide();
