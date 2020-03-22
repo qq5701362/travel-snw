@@ -11,47 +11,89 @@ $(function(){
 	//关闭登录弹框单击事件
 	$("#mainPage_cancelLogin").click(cancelLogin);
 	
+	//注册按钮
+	$("#mainPage_regist").click(regist);
 	
-	
-	//取消按钮
-	$("#mainPage_cancel").click(cancelWindown);
+	//登录按钮
+	$("#mainPage_login").click(login);
 	
 })
 
-/**
- * 打开注册窗口
- */	
-function registWindown(){
+
+function regist(){
+	
+	//清除提示信息内容
+	$("#warning_1 span").html("");
+	$("#warning_2 span").html("");
+	$("#warning_3 span").html("");
+	
+	//获取输入框的值
+	var name=$("#mainPage_name").val().trim();
+	var nick=$("#mainPage_nickname").val().trim();
+	var password=$("#mainPage_password").val().trim();
+	var final_password=$("#mainPage_conpassword").val().trim();
+	
 	debugger;
-	$("#mainPage_registModal").show();
+	//校验格式
+	var ok=true;
+	//检测用户名
+	if(name==""){
+		ok=false;
+		$("#warning_1 span").html("用户名为空");
+		$("#warning_1").show();
+	}
+	//检测密码
+	if(password==""){
+		ok=false;
+		$("#warning_2 span").html("密码为空");
+		$("#warning_2").show();
+	}else if(password.length < 6){
+		ok=false;
+		$("#warning_2 span").html("密码长度小于6位");
+		$("#warning_2").show();
+	}
+	//检测确认密码
+	if(final_password!=password){
+		ok=false;
+		$("#warning_3 span").html("输入密码不一致");
+		$("#warning_3").show();
+	}
+	if(ok){
+		$.ajax({
+			url:path+"/user/regist.do",
+			type:"post",
+			data:{
+				"account":name,
+				"user_name":nick,
+				"pswd":password
+			},
+			dataType:"json",
+			
+			success:function(result){
+				debugger;
+				if(result.state==0){
+					//获取到用户的所有信息
+					var user=result.data;
+					//关闭弹窗
+					
+					//返回登录页面
+//					$("#back").click();
+					//设置用户名输入域数据
+//					$("#count").val(user.name);
+					//密码输入域获得焦点
+//					$("#password").focus();
+				}else if(result.state==2){
+					$("#warning_1 span").html(result.message);
+					$("#warning_1").show();
+				}
+			},
+			error:function(data){
+				debugger;
+				alert("注册失败");
+			}
+		});
+	}
 }
-
-/**
- * 关闭注册窗口
- */	
-function cancelRegist(){
-	debugger;
-	$("#mainPage_registModal").hide();
-}
-
-/**
- * 打开登录窗口
- */	
-function showLogin(){
-	debugger;
-	$("#mainPage_loginModal").show();
-}
-
-/**
- * 关闭登录窗口
- */	
-function cancelLogin(){
-	debugger;
-	$("#mainPage_loginModal").hide();
-}
-
-
-
 
 
 /**
@@ -104,77 +146,32 @@ function loginAction(){
 }
 
 
-function registAction(){
-	debugger;
-	$("#mainPage_loginIndex").hide();
-	$("#mainPage_zc").show();
-			//清除提示信息内容
-			$("#warning_1 span").html("");
-			$("#warning_2 span").html("");
-			$("#warning_3 span").html("");
-			//获取参数
-			var name
-				=$("#regist_username").val().trim();
-			var nick
-				=$("#nickname").val().trim();
-			var password
-				=$("#regist_password").val().trim();
-			var final_password
-				=$("#final_password").val().trim();
-			//校验格式
-			var ok=true;
-			//检测用户名
-			if(name==""){
-				ok=false;
-				$("#warning_1 span").html("用户名为空");
-				$("#warning_1").show();
-			}
-			//检测密码
-			if(password==""){
-				ok=false;
-				$("#warning_2 span").html("密码为空");
-				$("#warning_2").show();
-			}else if(password.length<6){
-				ok=false;
-				$("#warning_2 span").html("密码长度小于6位");
-				$("#warning_2").show();
-			}
-			//检测确认密码
-			if(final_password!=password){
-				ok=false;
-				$("#warning_3 span").html("输入密码不一致");
-				$("#warning_3").show();
-			}
-			if(ok){
-				$.ajax({
-					url:path+"/user/regist.do",
-					type:"post",
-					data:{
-						"account":name,
-						"user_name":nick,
-						"pswd":password
-					},
-					dataType:"json",
-					
-					success:function(result){
-						debugger;
-						if(result.state==0){
-							var user=result.data;
-							//返回登录页面
-							$("#back").click();
-							//设置用户名输入域数据
-							$("#count").val(user.name);
-							//密码输入域获得焦点
-							$("#password").focus();
-						}else if(result.state==2){
-							$("#warning_1 span").html(result.message);
-							$("#warning_1").show();
-						}
-					},
-					error:function(data){
-						debugger;
-						alert("注册失败");
-					}
-				});
-			}
-		}
+
+		
+/**
+ * 打开注册窗口
+ */	
+function registWindown(){
+	$("#mainPage_registModal").show();
+}
+
+/**
+ * 关闭注册窗口
+ */	
+function cancelRegist(){
+	$("#mainPage_registModal").hide();
+}
+
+/**
+ * 打开登录窗口
+ */	
+function showLogin(){
+	$("#mainPage_loginModal").show();
+}
+
+/**
+ * 关闭登录窗口
+ */	
+function cancelLogin(){
+	$("#mainPage_loginModal").hide();
+}
