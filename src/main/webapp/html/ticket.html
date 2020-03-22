@@ -5,8 +5,20 @@
 	<meta charset="UTF-8">
 	<title>ticket</title>
 	<link rel="stylesheet" href="../css/index/nav.css">
-	
+	<link rel="stylesheet" type="text/css" href="../easyui/themes/default/easyui.css">
+	<link rel="stylesheet" type="text/css" href="../easyui/themes/icon.css">
+	<script type="text/javascript" src="../easyui/jquery.min.js"></script>
+	<script type="text/javascript" src="../easyui/jquery.easyui.min.js"></script>
+	<script type="text/javascript" src="../easyui/locale/easyui-lang-zh_CN.js"></script>
+	<script type="text/javascript" src="../js/util/basevalue.js"></script>
+	<script type="text/javascript" src="../js/jq/jquery-3.4.1.min.js"></script>
+	<script type="text/javascript" src="../js/ticket.js"></script>
 	<script>
+	$('#dd').datetimebox({    
+	    value: '3/4/2010 2:3',    
+	    required: true,    
+	    showSeconds: false   
+	}); 
 	    function Show(){
 	        document.getElementById('shade').classList.remove('hide');
 	        document.getElementById('modal').classList.remove('hide');
@@ -21,95 +33,97 @@
 <body>
  <div class="top">
  	<div ><input class="bt" type="button" value="登录" onclick="Show();">
- 	<div id="shade" class="c1 hide"></div>
-<div id="modal" class="c2 hide"></br><img  class="modal-img" src="../images/5268.jpg"  alt="0"/>
-<div class="bg">    
-<div class="log"><p>欢迎登录！</p></div>
- <div ><p>用户：<input class="text" type="text" /></p> </br></div> 
- <div><p>密码：<input  class="password" type="password" /></p></div>
+ 		<div id="shade" class="c1 hide"></div>
+		<div id="modal" class="c2 hide"></br><img  class="modal-img" src="../images/5268.jpg"  alt="0"/>
+			<div class="bg">    
+				<div class="log"><p>欢迎登录！</p></div>
+ 					<div ><p>用户：<input class="text" type="text" /></p> </br></div> 
+ 					<div><p>密码：<input  class="password" type="password" /></p></div>
     
-<p>
-    <input class="log1" type="button" value="登录">
-  <input class="log2" type="button" value="去注册" onclick="Show();">  
-</p>
-<p><input class="cancel" type="button" value="取消" onclick="Hide();"></p>
-</div>
-    </div>
- 
-
+					<p>
+    					<input class="log1" type="button" value="登录">
+  						<input class="log2" type="button" value="去注册" onclick="Show();">  
+					</p>
+					<p><input class="cancel" type="button" value="取消" onclick="Hide();"></p>
+			</div>
+    	</div>
  	</div>
  	
-                   <center> 
-                    <ul>
-                    <li><a href="mainPage.html">首页</a></li>
-                    <li><a href="../html/introduce.html">三娘湾概况</a></li>
-                    <li><a href="#">路线指南</a><ul>
-                        <li><a href="#"> 火车站</a></li>
-                        <li><a href="#"> 汽车站</a></li>
-                        </ul></li>
-                    <li><a href="../html/cate.html">美食攻略</a></li>
-                    <li><a href="../html/ticket.html">订票服务</a></li>
-                    <li><a href="#">游客留言</a></li>
-                      
-                    </ul>
-
-                   </center> 
+	<center> 
+		 <ul>
+			 <li><a href="mainPage.html">首页</a></li>
+			 <li><a href="../html/introduce.html">三娘湾概况</a></li>
+			 <li><a href="#">路线指南</a><ul>
+			     <li><a href="#"> 火车站</a></li>
+			     <li><a href="#"> 汽车站</a></li>
+			     </ul></li>
+			 <li><a href="../html/cate.html">美食攻略</a></li>
+			 <li><a href="../html/ticket.html">订票服务</a></li>
+			 <li><a href="#">游客留言</a></li>
+		 </ul>
+	</center> 
 
   </div>
   
   
-  </div>
-  <div class="details">
-  <div class="notice">
-  <div class="notice1"><p>购票须知</p></div>
-  <div class="in">
-  <div class="in1">
-  <p>全票价:50元/人/次</p>
-  <p>半票价:25元/人/次，符合以下标准的游客享受半票优惠:</p>
-  <p>1、身高1.1米-1.4米的儿童;</p>
-  <p>2、60-70岁的老人凭身份证;</p>
-  <p>3、学生持学生证。</p>
-  <p>优惠价:1、钦州本地户口的持身份证 15元/人/次</p>
-  <p>2、团队 40元/人/次</p>
-  </div>
-  <div class="in2">
-  <p>免票:符合以下标准的游客享受免票优惠:</p>
-  <p>1、1.1米以下儿童;</p>
-  <p>2、残疾人士凭残疾证;</p>
-  <p>3、70岁以上老年人凭老年机构颁发的《老年人优待证》、身份证;</p>
-  <p>4、现役军人凭《士兵证》或《军官证》。</p>
-<div>
-  <div class="hint">点击这里购票哦<input class="bt2" type="button" value="购票" onclick="Show1();"></div>
-  <div id="shade1" class="d1 hide"></div>
-<div id="modal1" class="d2 hide"></br><img  class="modal1-img" src="../images/5268.jpg"  alt="0"/>
-<div class="bg1">  
-
- </br><div class="rg"><p>姓名：<input class="text1" type="text" /></p></div> 
- <div class="rg"><p>购票类型：<input class="text2" type="text" /></p></div> 
- <div class="rg"><p>购买张数：<input class="text2" type="text" /></p></div>
- <div class="rg"><p>选择日期：<input class="text2" type="text" /></p></div> 
-<div  class="p"> <p>
- <input class="put" type="button" value="提交" >
- <input class="cancel1" type="button" value="取消" onclick="Hide1();"></p> 
-</div>
-
-    </div>
- 
-<script>
-    function Show1(){
-        document.getElementById('shade1').classList.remove('hide');
-        document.getElementById('modal1').classList.remove('hide');
-    }
-     function Hide1(){
-        document.getElementById('shade1').classList.add('hide');
-        document.getElementById('modal1').classList.add('hide');
-    }
-</script>
-  </div>
-  
-  </div>
-  </div>
-  </div>
-  </div>
+	<div class="details">
+  		<div class="notice">
+  			<div class="notice1"><p>购票须知</p></div>
+  			<div class="in">
+  				<div class="in1">
+  					<p>全票价:50元/人/次</p>
+  					<p>半票价:25元/人/次，符合以下标准的游客享受半票优惠:</p>
+  					<p>1、身高1.1米-1.4米的儿童;</p>
+  					<p>2、60-70岁的老人凭身份证;</p>
+  					<p>3、学生持学生证。</p>
+  					<p>优惠价:1、钦州本地户口的持身份证 15元/人/次</p>
+  					<p>2、团队 40元/人/次</p>
+  				</div>
+  				<div class="in2">
+  					<p>免票:符合以下标准的游客享受免票优惠:</p>
+					<p>1、1.1米以下儿童;</p>
+					<p>2、残疾人士凭残疾证;</p>
+					<p>3、70岁以上老年人凭老年机构颁发的《老年人优待证》、身份证;</p>
+					<p>4、现役军人凭《士兵证》或《军官证》。</p>
+					<div>
+  						<div id="ticket_showWindown" class="hint">点击这里购票哦<input class="bt2" type="button" value="购票"></div>
+  						<div id="ticket_shade" class="d1 hide"></div>
+						<div id="ticket_modal" class="d2 hide"></br><img  class="modal1-img" src="../images/5268.jpg"  alt="0"/>
+							<div id="ticket_bg1" class="bg1">  
+								</br>
+ 								<div class="rg"><p>姓名：<input id="" class="text1" type="text" /></p></div> 
+ 								<div class="rg"><p>购票类型：<input class="text2" type="text" /></p></div> 
+ 								<div class="rg">
+ 									<p>购买张数：
+		 								<select  class="text2">
+										  <option value ="1">1</option>
+										  <option value ="2">2</option>
+										  <option value="3">3</option>
+										  <option value="4">4</option>
+										</select>
+ 									</p>
+ 								</div>
+ 								
+ 								<div class="rg"><p>选择日期：
+ 									<select  class="text2">
+										  <option select=true, value ="1">2020-3-22</option>
+										  <option value ="2">2020-3-23</option>
+										  <option value="3">2020-3-24</option>
+										  <option value="4">2020-3-25</option>
+									</select>
+ 								
+ 								</p></div> 
+								<div  class="p"> <p>
+ 									<input id="ticket_commit" class="put" type="button" value="提交" >
+ 									<input id="ticket_cannel" class="cancel1" type="button" value="取消"></p> 
+								</div>
+    						</div>
+    						
+  						</div>
+  					</div>
+  				</div>
+  			</div>
+  		</div>
+	</div>
 </body>
 </html>
