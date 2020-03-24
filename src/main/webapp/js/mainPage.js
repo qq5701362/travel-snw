@@ -1,5 +1,13 @@
 $(function(){
 	
+	jinQu();
+	
+	//获取cookie
+	getCachceCookie ();
+	
+	//退出按钮，删除cookie信息
+	$("#mainPage_signOut").click(signOut);
+
 	//打开注册弹框单击事件
 	$("#mainPage_registWindown").click(registWindown);
 	//关闭注册弹框单击事件
@@ -19,6 +27,45 @@ $(function(){
 	
 })
 
+
+/**
+ * 如果存在cookie，则说明用户登陆过了
+ */
+function getCachceCookie(){
+	var cookie = getCookie1("userId");
+		
+	//cookie不为空，则说明页面登陆过
+	if (cookie) {
+		//显示退出按钮
+		$("#mainPage_registWindown").attr("style","display:none;");
+		$("#mainPage_loginWindown").attr("style","display:none;");
+		$("#mainPage_signOut").attr("style","display:block;");
+	} else {
+		//没有cookie信息，说明没有登陆，显示注册和登陆按钮
+		$("#mainPage_signOut").attr("style","display:none;");
+		$("#mainPage_registWindown").attr("style","display:block;");
+		$("#mainPage_loginWindown").attr("style","display:block;");
+	}
+}
+
+/**
+ * 退出按钮，删除cookie
+ */
+function signOut(){
+	var flag = delCookie("userId");
+	if (flag){
+		//删除cookie成功，显示登陆和注册按钮
+		$("#mainPage_signOut").attr("style","display:none;");
+		$("#mainPage_registWindown").attr("style","display:block;");
+		$("#mainPage_loginWindown").attr("style","display:block;");
+		return;
+	} else {
+		alert('退出失败');
+		return;
+	}
+	
+	
+}
 
 /**
  * 注册单击事件
@@ -138,14 +185,23 @@ function login(){
 				if(result.state==0){
 					//成功
 					var user=result.data;
-					//
-//					addCookie("userId",user.id,2);
+					debugger;
+					addCookie("userId",user.id,2);
 					//关闭弹窗
 					cancelLogin();
 					//隐藏注册和登录按钮，显示退出按钮
 					$("#mainPage_registWindown").attr("style","display:none;");
 					$("#mainPage_loginWindown").attr("style","display:none;");
-					$("#mainPage_signOut").attr("style","display:block;");
+					
+					//通过用户id判断是否是超级管理员
+					if (user.id === 10000) {
+						//跳转去管理页面
+						window.location.href="log_in.html";
+					} else {
+						//普通用户
+						$("#mainPage_signOut").attr("style","display:block;");
+					}
+					
 					
 				}else if(result.state==2){//用户名错误
 					$("#count_span").html(result.message);
@@ -198,14 +254,8 @@ function cancelLogin(){
 	$("#mainPage_loginModal").hide();
 }
 
-/*景区景点*/
-$(document).ready(function(e) {
-    $(".san_btn").click(function(e) {
+
+function jinQu () {
+	$(".san_btn").click(function(e) {
         $(".san_intr").toggle()});
-    
-});
-
-
-
-
-
+}

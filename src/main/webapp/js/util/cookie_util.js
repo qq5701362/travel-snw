@@ -29,7 +29,7 @@ function cookie(name){
 
 
 
-function getCookie(objName){//获取指定名称的cookie的值
+function getCookie1(objName){//获取指定名称的cookie的值
 
     var arrStr = document.cookie.split("; ");
 
@@ -67,7 +67,7 @@ function addCookie(objName,objValue,objHours){      //添加cookie
 
  
 
-function SetCookie(name,value)//两个参数，一个是cookie的名子，一个是值
+function setCookie(name,value)//两个参数，一个是cookie的名子，一个是值
 
 {
 
@@ -93,13 +93,16 @@ function getCookie(name)//取cookies函数
 
 }
 
-function delCookie(name)//删除cookie
-{
+function delCookie(name){//删除cookie
+
+	var flag = false;
     var exp = new Date();
     exp.setTime(exp.getTime() - 1);
     var cval=getCookie(name);
     if(cval!=null) {
     	document.cookie= name + "="+cval+";expires="+exp.toGMTString();
+    	flag = true;
     }
+    return flag;
 }
 
