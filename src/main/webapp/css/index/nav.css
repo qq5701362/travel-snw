@@ -2,7 +2,7 @@ body{
 margin-left: auto;
 margin-right: auto;
 width:1350px;
-height:3050px;
+height:1700px;
 background-color:rgb(150,180,255); 
 }
 .top{
@@ -158,13 +158,145 @@ p {
 }
 /*路线指南*/
 .north{
-	width: 1100px;
+	width: 1200px;
     height: 40px;
     background:yellow;
-    margin-left:120px;
+    margin-left:70px;
     
 }
+.route1{
+	width: 1200px;
+    height: 300px;
+    /*background:green;*/
+    margin-left:70px;
+    margin-top:10px;
+    border: rgb(217,217,217)  solid 1px;
+}
+.map1{
+	width: 300px;
+    height: 300px;
+    /*background:red;*/
+    position:absolute;
+    
+}
+.map1-img{
+	width: 300px;
+    height: 300px;
+}
+.route1-1{
+	width: 900px;
+    height: 300px;
+    margin-left:300px;
+    /*background:yellow;*/
+    position:absolute;
+}
 
+
+
+
+.east{
+	width: 1200px;
+    height: 40px;
+    background:yellow;
+    margin-left:70px;
+    
+}
+.route2{
+	width: 1200px;
+    height: 300px;
+    /*background:green;*/
+    margin-left:70px;
+    margin-top:10px;
+    border: rgb(217,217,217)  solid 1px;
+}
+.map2{
+	width: 300px;
+    height: 300px;
+    /*background:red;*/
+    position:absolute;
+    
+}
+.map2-img{
+	width: 300px;
+    height: 300px;
+}
+.route1-2{
+	width: 900px;
+    height: 300px;
+    margin-left:300px;
+    /*background:yellow;*/
+    position:absolute;
+}
+
+
+
+.south{
+	width: 1200px;
+    height: 40px;
+    background:yellow;
+    margin-left:70px;
+    
+}
+.route3{
+	width: 1200px;
+    height: 300px;
+    /*background:green;*/
+    margin-left:70px;
+    margin-top:10px;
+    border: rgb(217,217,217)  solid 1px;
+}
+.map3{
+	width: 300px;
+    height: 300px;
+    /*background:red;*/
+    position:absolute;
+    
+}
+.map3-img{
+	width: 300px;
+    height: 300px;
+}
+.route1-3{
+	width: 900px;
+    height: 300px;
+    margin-left:300px;
+    /*background:yellow;*/
+    position:absolute;
+}
+
+.north{
+	width: 1200px;
+    height: 40px;
+    background:yellow;
+    margin-left:70px;
+    
+}
+.route4{
+	width: 1200px;
+    height: 300px;
+    /*background:green;*/
+    margin-left:70px;
+    margin-top:10px;
+    border: rgb(217,217,217)  solid 1px;
+}
+.map4{
+	width: 300px;
+    height: 300px;
+    /*background:red;*/
+    position:absolute;
+    
+}
+.map4-img{
+	width: 300px;
+    height: 300px;
+}
+.route1-4{
+	width: 900px;
+    height: 300px;
+    margin-left:300px;
+    /*background:yellow;*/
+    position:absolute;
+}
 
 /*美食*/
 .title{
@@ -185,7 +317,7 @@ p {
     height: 148px;
     float: left;
     border: rgb(217,217,217)  solid 1px;
-    /*background-color: yellow;*/
+   /*background-color: yellow;*/
     margin-left:11px;
 }
 .cate2-img{
@@ -274,7 +406,8 @@ p {
 	margin-left:610px;
 	position:absolute; 
 	border: rgb(217,217,217)  solid 3px;
-	margin-top:-182px;
+	margin-top:0px;
+	position:absolute; 
 }
 .cate4-2-img{
 	width:150px;
@@ -293,7 +426,7 @@ p {
 	width:1200px;
 	height:180px;
 	/*background:red;*/
-	margin-left:-3px;
+	margin-left:75px;
 	margin-top:10px;
 }
 .cate5-1{
@@ -323,7 +456,7 @@ p {
 	margin-left:610px;
 	position:absolute; 
 	border: rgb(217,217,217)  solid 3px;
-	margin-top:-182px;
+	margin-top:0px;
 }
 .cate5-2-img{
 	width:150px;
@@ -342,7 +475,7 @@ p {
 	width:1200px;
 	height:180px;
 	/*background:red;*/
-	margin-left:-3px;
+	margin-left:75px;
 	margin-top:10px;
 }
 .cate6-1{
@@ -372,7 +505,7 @@ p {
 	margin-left:610px;
 	position:absolute; 
 	border: rgb(217,217,217)  solid 3px;
-	margin-top:-182px;
+	margin-top:0px;
 }
 .cate6-2-img{
 	width:150px;

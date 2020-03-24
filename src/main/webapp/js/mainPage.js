@@ -197,3 +197,15 @@ function showLogin(){
 function cancelLogin(){
 	$("#mainPage_loginModal").hide();
 }
+
+/*景区景点*/
+$(document).ready(function(e) {
+    $(".san_btn").click(function(e) {
+        $(".san_intr").toggle()});
+    
+});
+
+
+
+
+

@@ -52,9 +52,9 @@ public class UserServiceTest extends TestBase {
 	
 	@Test
 	public void testRegist () {
-		String account = "wanggk";
-		String pswd = "1122";
-		String user_name = "王五6";
+		String account = "wangk1";
+		String pswd = "112321";
+		String user_name = "王五661";
 		userService.regist(account, pswd, user_name);
 	}
 	

@@ -3,7 +3,7 @@ body{
 margin-left: auto;
 margin-right: auto;
 width:1350px;
-height:3050px;
+height:2050px;
 background-color:rgb(150,180,255); 
 }
 .top{
@@ -20,14 +20,14 @@ background-color:rgb(150,180,255);
 center{
 	height: 80px; /*高度改为自动高度*/
     width:1150px;
-    background:red;
+    /*background:red;*/
     position:absolute;
 }
 
 .mainPage_log{
 	height: 80px; /*高度改为自动高度*/
     width:200px;
-    background:yellow;
+   /* background:yellow;*/
     
     margin-left:1150px;
 }
@@ -39,9 +39,9 @@ center{
 	line-height:30px;
 	margin-top: 30px;
 	float: left;
-	margin-left: 0px;
+	margin-left: 10px;
 	position:absolute;
-	display:inline-block;
+	
 }
 .bt2{
 	color: black;
@@ -52,8 +52,8 @@ center{
 	margin-top: 30px;
 	float: left;
 	margin-left: 100px;
-	position:absolute;
-	display:inline-block;
+	
+	
 }
 /*注册*/
 .hide{
@@ -72,7 +72,7 @@ center{
             
             position: fixed;
             width: 500px;
-            height:400px;
+            height: 400px;
             top:50%;
             left: 50%;
             z-index: 3;
@@ -82,15 +82,15 @@ center{
 
         }
         .modal-img{
-        width: 400px;
-        height: 300px;
+        width: 500px;
+        height: 400px;
         
         
         }
         .bg{
         width: 500px;
         height: 400px;
-        background:green;
+        background:yellow;
         margin-top: -404px;
         }
 		#modal p {
@@ -160,7 +160,7 @@ center{
 
         }
         .modal-img{
-        width: 500px;
+        width:500px;
         height: 400px;
         
         
@@ -168,7 +168,7 @@ center{
         .bg1{
         width: 500px;
         height: 400px;
-        background:green;
+        /*background:yellow;*/
         margin-top: -404px;
         }
 		#modal p {
@@ -256,9 +256,6 @@ center{
     display: block;
 
 }
-/*登录*/
-
-/*注册*/
 
 
 		
@@ -280,7 +277,7 @@ center{
 }
 .middle{
  width:1350px;
- height:1090px; 
+ height:1490px; 
  overflow: hidden;
  position:relative;
  background-color: yellow;
@@ -292,9 +289,10 @@ center{
  overflow: hidden;
  position:relative;
  margin-left: 0px;
- /*background-color: red;*/
+ background-color: red;
  float: left;
 }
+/*轮播图*/
 *{
  padding:0;
  margin:0;
@@ -364,6 +362,7 @@ center{
  .container:hover .arrow{
  display:block;
  }
+ /*三娘湾旅游*/
 .snwtravel{
  width: 320px;
  height: 320px;
@@ -379,12 +378,15 @@ center{
     display: block; /* 把链接显示为块元素可使整个链接区域可点击 */
     color:white;
     text-align: center;
-    padding: 0px;
     overflow: hidden;
     text-decoration: none; /* 去除下划线 */
-    font-size: 25px;
+  font-size: 25px;
     margin-top: 10px;
     padding:10px;
+}
+.snwtravel2 a:hover{
+    /* 鼠标选中时字体变为黑色 */
+    color: #111;
 }
 .snwtravel1{
     font-size: 30px;
@@ -392,6 +394,7 @@ center{
     overflow: hidden;
 
 }
+/*最新资讯*/
 .information{
     width: 320px;
     height: 320px;
@@ -418,6 +421,12 @@ center{
     padding:3px;
 
 }
+.information2 a:hover{
+    /* 鼠标选中时字体变为蓝色 */
+   color:rgb(100,180,255);
+}
+
+/*景区景点*/
 .introduce{
     width: 1350px;
     height: 80px;
@@ -441,9 +450,10 @@ center{
 }
 .scenic{
     width: 1350px;
-    height:300px;
-    background: white;
+    height:650px;
+    background: red;
     margin-top: 10px;
+   
 }
 
 .scenic1{
@@ -454,6 +464,7 @@ center{
     background-color: rgb(245,245,245);
     left: 10px;
     margin-left:20px;
+    
 }
 .scenic1-img{
    width: 200px;
@@ -461,24 +472,40 @@ center{
 }
 .scenic1-1{
     width: 200px;
-    height: 140px;
+    height: 300px;
     background: blue;
     border: rgb(217,217,217) solid 1px;
-
+    
 }
 
 .scenic1-1-img{
     width: 200px;
     height: 115px;
     margin-left: 0px;
+    
+}
+.san{
+	width: 200px;
+    height: 180px;
+    background:white;
 }
 .scenic1-1-desc{
     font-size: 15px;
-    margin-left: 40px;
+    margin-left: 0px;
+    width: 200px;
+    height: 25px;
+    background:yellow;
 }
+#san_btn{
+	width: 200px;
+    height: 25px;
+    
+}
+/*隐藏内容*/
+
 .scenic1-2{
     width: 200px;
-    height: 140px;
+    height: 300px;
     background: green;
     border: rgb(217,217,217) solid 1px;
 }
@@ -492,7 +519,7 @@ center{
 .characteristic{
     width: 656px;
     height: 350px;
-    background: red;
+   background: red;
     float: left;
     border: rgb(217,217,217) solid 1px;
     left: 10px;
@@ -501,7 +528,7 @@ center{
 .cate{
     width: 656px;
     height: 70px;
-    background: rgb(20, 100, 255);
+   background: rgb(20, 100, 255);
 }
 .cate1 {
     font-size: 30px;
@@ -539,7 +566,7 @@ center{
 .Homestay-title{
   width: 656px;
   height:70px;
-  background: blue;  
+background: rgb(20, 100, 255); 
   
 }
 .Homestay-title1{
@@ -563,6 +590,9 @@ center{
 }
 .bottom{
 width:1350px;
-height:200px;
+height:150px;
 background:black;
+margibn-top:200px;
 }
+
+
