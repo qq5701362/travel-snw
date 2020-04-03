@@ -1,0 +1,254 @@
+body{
+margin-left: auto;
+margin-right: auto;
+width:1350px;
+height:1250px; 
+/*background-color:rgb(150,180,255);*/
+}
+#sug_order{
+    /* 设置宽度高度背景颜色 */
+    height: 40px; /*高度改为自动高度*/
+    width:1050px;
+    margin-left: 0;
+    /*background:yellow;*/
+    top: 0;/*离顶部的距离为0*/
+    /*margin-bottom: 15px;*/
+    margin-left:150px;
+   
+}
+#sug_order ul{
+
+/*text-decoration: none;*/
+list-style-type: none;
+white-space:nowrap;
+overflow: hidden;
+padding: 0;
+width: auto;	
+}
+#sug_order li {
+    float:left; /* 使li内容横向浮动，即横向排列  */
+    margin-right:0%;  /* 两个li之间的距离*/
+    position: relative;
+    overflow: hidden;
+    list-style-type: none;
+}
+#sug_order li a{
+   /* 设置链接内容显示的格式*/
+    display: block; /* 把链接显示为块元素可使整个链接区域可点击 */
+     color:black;
+    padding: 0px;
+    overflow: hidden;
+    text-decoration: none; /* 去除下划线 */
+    font-size: 15px;
+    list-style-type: none;
+    margin-top:10px;
+}
+#sug_order li a:hover{
+    color: rgb(30,180,255);
+}
+#sug_title{
+	width:1050px;
+	height:40px;
+	background-color:rgb(30,180,255);
+	margin-left:150px;
+}
+#sug_title li{
+	text-decoration: none; /* 去除下划线 */
+    font-size: 25px;
+    list-style-type: none;
+    text-align:center;
+}
+#sug_frame{
+	width:1050px;
+	height:1250px;
+	/*background-color:yellow;*/
+	margin-left:150px;
+	border: rgb(217,217,217) solid 1px;
+	margin-top:10px;
+}
+#sug_subh_1{
+	width:180px;
+	height:35px;
+	background-color:rgb(30,180,255);
+	margin-top:10px;
+}
+#sug_subh_1 li{
+	text-decoration: none; /* 去除下划线 */
+    font-size: 20px;
+    list-style-type: none;
+    
+}
+#sug_desc_1{
+	text-indent: 2em;
+	line-height: 1.5em;
+}
+
+#sug_subh_2{
+	width:180px;
+	height:35px;
+	background-color:rgb(30,180,255);
+	margin-top:10px;
+}
+#sug_subh_2 li{
+	text-decoration: none; /* 去除下划线 */
+    font-size: 20px;
+    list-style-type: none;
+    
+}
+#sug_desc_2{
+	text-indent: 2em;
+	line-height: 1.5em;
+}
+
+#sug_subh_3{
+	width:180px;
+	height:35px;
+	background-color:rgb(30,180,255);
+	margin-top:10px;
+}
+#sug_subh_3 li{
+	text-decoration: none; /* 去除下划线 */
+    font-size: 20px;
+    list-style-type: none;
+    
+}
+#sug_desc_3{
+	text-indent: 2em;
+	line-height: 1.5em;
+}
+
+#sug_subh_4{
+	width:180px;
+	height:35px;
+	background-color:rgb(30,180,255);
+	margin-top:10px;
+}
+#sug_subh_4 li{
+	text-decoration: none; /* 去除下划线 */
+    font-size: 20px;
+    list-style-type: none;
+    
+}
+#sug_desc_4{
+	text-indent: 2em;
+	line-height: 1.5em;
+}
+
+#sug_subh_5{
+	width:180px;
+	height:35px;
+	background-color:rgb(30,180,255);
+	margin-top:10px;
+}
+#sug_subh_5 li{
+	text-decoration: none; /* 去除下划线 */
+    font-size: 20px;
+    list-style-type: none;
+    
+}
+#sug_desc_5{
+	text-indent: 2em;
+	line-height: 1.5em;
+}
+
+#sug_subh_6{
+	width:180px;
+	height:35px;
+	background-color:rgb(30,180,255);
+	margin-top:10px;
+}
+#sug_subh_6 li{
+	text-decoration: none; /* 去除下划线 */
+    font-size: 20px;
+    list-style-type: none;
+    
+}
+#sug_desc_6{
+	text-indent: 2em;
+	line-height: 1.5em;
+}
+
+#sug_subh_7{
+	width:180px;
+	height:35px;
+	background-color:rgb(30,180,255);
+	margin-top:10px;
+}
+#sug_subh_7 li{
+	text-decoration: none; /* 去除下划线 */
+    font-size: 20px;
+    list-style-type: none;
+    
+}
+#sug_desc_7{
+	text-indent: 2em;
+	line-height: 1.5em;
+}
+
+#sug_subh_8{
+	width:180px;
+	height:35px;
+	background-color:rgb(30,180,255);
+	margin-top:10px;
+}
+#sug_subh_8 li{
+	text-decoration: none; /* 去除下划线 */
+    font-size: 20px;
+    list-style-type: none;
+    
+}
+#sug_desc_8{
+	text-indent: 2em;
+	line-height: 1.5em;
+}
+
+#sug_subh_9{
+	width:180px;
+	height:35px;
+	background-color:rgb(30,180,255);
+	margin-top:10px;
+}
+#sug_subh_9 li{
+	text-decoration: none; /* 去除下划线 */
+    font-size: 20px;
+    list-style-type: none;
+    
+}
+#sug_desc_9{
+	text-indent: 2em;
+	line-height: 1.5em;
+}
+
+#sug_subh_10{
+	width:180px;
+	height:35px;
+	background-color:rgb(30,180,255);
+	margin-top:10px;
+}
+#sug_subh_10 li{
+	text-decoration: none; /* 去除下划线 */
+    font-size: 20px;
+    list-style-type: none;
+    
+}
+#sug_desc_10{
+	text-indent: 2em;
+	line-height: 1.5em;
+}
+
+#sug_subh_11{
+	width:180px;
+	height:35px;
+	background-color:rgb(30,180,255);
+	margin-top:10px;
+}
+#sug_subh_11 li{
+	text-decoration: none; /* 去除下划线 */
+    font-size: 20px;
+    list-style-type: none;
+    
+}
+#sug_desc_11{
+	text-indent: 2em;
+	line-height: 1.5em;
+}

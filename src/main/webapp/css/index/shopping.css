@@ -1,0 +1,342 @@
+body{
+margin-left: auto;
+margin-right: auto;
+width:1350px;
+height:2050px;
+background-color:rgb(150,180,255); 
+}
+#shopping_head{
+width:1050px;
+height:40px;
+background-color:#ccc;
+margin-left:150px;
+}
+#shopping_head_left{
+width:200px;
+height:40px;
+/*background-color:red;*/
+position:absolute;
+}
+#shopping_head_right{
+width:400px;
+height:40px;
+/*background-color:green;*/
+
+margin-left:650px;
+
+}
+#shopping_head_left ul{
+
+/*text-decoration: none;*/
+list-style-type: none;
+white-space:nowrap;
+overflow: hidden;
+padding: 0;
+width: auto;	
+}
+#shopping_head_left li {
+    float:left; /* 使li内容横向浮动，即横向排列  */
+    margin-right:0%;  /* 两个li之间的距离*/
+    position: relative;
+    overflow: hidden;
+    list-style-type: none;
+}
+#shopping_head_left li a{
+   /* 设置链接内容显示的格式*/
+    display: block; /* 把链接显示为块元素可使整个链接区域可点击 */
+    color:black;
+    padding: 0px;
+    overflow: hidden;
+    text-decoration: none; /* 去除下划线 */
+    font-size: 15px;
+    list-style-type: none;
+    margin-top:0px;
+}
+#shopping_head_left li a:hover{
+    color: rgb(30,180,255);
+}
+
+#shopping_head_right li {
+    float:left; /* 使li内容横向浮动，即横向排列  */
+    margin-right:5%;  /* 两个li之间的距离*/
+    position: relative;
+    overflow: hidden;
+    list-style-type: none;
+    
+    /* 设置链接内容显示的格式*/
+    display: block; /* 把链接显示为块元素可使整个链接区域可点击 */
+    color:black;
+    padding: 0px;
+    overflow: hidden;
+    text-decoration: none; /* 去除下划线 */
+    font-size: 15px;
+    list-style-type: none;
+    margin-top:10px;
+}
+#shopping_head_right li:hover{
+    color: rgb(30,180,255);
+}
+#shoucang_img{
+	width:20px;
+    height:15px;
+}
+#gouwuche_img{
+	width:20px;
+    height:15px;
+}
+*{
+            padding: 0;
+            margin: 0;
+ }
+ #search{
+     width: 350px;
+     height:40px;            
+     margin-left:700px;
+     margin-top:10px;
+     display: flex;
+     /*border: 1px solid red;*/
+        }
+#search input{
+      float: left;//左浮动
+      flex: 4;
+      height: 30px;
+      width:300px;
+      outline: none;
+      border: 1px solid red;
+      box-sizing: border-box;//盒子模型，怪异IE盒子模型，width=content+border*2+padding*2
+      padding-left: 10px;
+               }
+#search button{
+      float: right;
+      flex: 1;
+      width: 50px;
+      height: 30px;
+      background-color: red;
+      color: white;
+      border-style: none;
+      outline: none;
+              }
+#search button i{
+      font-style: normal;
+                }
+#search button:hover{
+      font-size: 16px;
+                }
+#shop_hr1{
+	height:1px;
+	
+	border:none;
+	border-top:2px solid #00ff00;
+	
+}               
+#shop_frame_1{
+	height: 300px;
+    width:1050px;
+    background-color: yellow;
+    margin-left:150px;
+}
+#frame_1_left{
+	height: 300px;
+    width:200px;
+    background-color: #ebebeb;
+    position:absolute;
+}
+#left_fruit{
+	height: 40px;
+    width:200px;
+    background-color: #ebebeb;
+    size:20px;
+    text-align:center;
+}
+#frame_1_left ul{
+
+/*text-decoration: none;*/
+list-style-type: none;
+white-space:nowrap;
+overflow: hidden;
+padding: 0;
+width: auto;
+size:20px;	
+}
+  #left_fruit li {
+    font-size: 25px;
+    position: relative;
+    overflow: hidden;
+    
+}
+
+#left_hr1{
+	height:1px;
+	border:none;
+	border-top:2px solid #008000;
+	width:200px;
+}  
+
+#left_seafood{
+	height: 40px;
+    width:200px;
+    background-color: #ebebeb;
+    size:20px;
+    text-align:center;
+}
+
+  #left_seafood li {
+    font-size: 25px;
+    position: relative;
+    overflow: hidden;
+    
+}
+
+#left_handicraft{
+	height: 40px;
+    width:200px;
+    background-color: #ebebeb;
+    size:20px;
+    text-align:center;
+}
+
+  #left_handicraft li {
+    font-size: 25px;
+    position: relative;
+    overflow: hidden;
+    
+}
+#left_salability{
+	height: 40px;
+    width:200px;
+    background-color: #ebebeb;
+    size:20px;
+    text-align:center;
+}
+ #left_salability li {
+    font-size: 25px;
+    position: relative;
+    overflow: hidden;
+    
+}
+#left_discount{
+	height: 40px;
+    width:200px;
+    background-color: #ebebeb;
+    size:20px;
+    text-align:center;
+}
+ #left_discount li {
+    font-size: 25px;
+    position: relative;
+    overflow: hidden;
+    
+}
+
+
+#left_other{
+	height: 40px;
+    width:200px;
+    background-color: #ebebeb;
+    size:20px;
+    text-align:center;
+}
+
+  #left_other li {
+    font-size: 25px;
+    position: relative;
+    overflow: hidden;
+    
+}
+
+
+#frame_1_centre{
+	height: 300px;
+    width:550px;
+    background-color: red;
+    margin-left:210px;
+    position:absolute;
+}
+#centre_img{
+	height: 300px;
+    width:550px;
+}
+#frame_1_right{
+	height: 300px;
+    width:280px;
+    background-color: red;
+    margin-left:770px;
+}
+
+#right_img1{
+	height:142px;
+    width:280px;
+}
+#right_img2{
+	height:154px;
+    width:280px;
+    margin-top:0px;
+}
+
+/*第二部分*/
+/*1.公用部分*/
+/*1.1各副标题*/
+#shop_subhead_1{
+	height:30px;
+    width:150px;
+    background-color: #009700;
+    margin-left:175px;
+    margin-top:10px;
+    text-align:center;
+    font-size: 20px;
+    color:#ffffff;
+}
+/*1.2大框*/
+#shop_frame_2{
+	height:300px;
+    width:1000px;
+    background-color: red;
+    
+    margin-left:175px;
+}
+/*1.3五个小框*/
+.frame_2_1{
+    width: 190px;
+    height: 300px;
+    float: left;
+    border: rgb(217,217,217) solid 5px;
+    background-color: rgb(245,245,245);
+    left: 10px;
+   /* margin-left:20px;*/
+}
+/*1.4描述框架*/
+.frame_2_1_desc{
+	width: 190px;
+    height: 70px;
+    background-color: #ddec71;
+    
+}
+/*1.5图片大小*/
+.frame_2_1_img{
+	width: 190px;
+    height: 160px;
+}
+/*1.6最后部分（购物车和购买）*/
+.frame_2_1_last{
+	width: 190px;
+    height: 65px;
+   background-color: #ddec71;
+}
+/*1.7购物车*/
+.shop_cart{
+	width: 90px;
+    height: 30px;
+   background-color:#00d936;
+    position: relative;
+    margin-left:90px;
+    font-size: 15px;
+}
+/*1.8购买*/
+.shop_buy{
+	width: 50px;
+    height: 30px;
+    background-color:#00d936;
+    position: relative;
+    margin-left:130px;
+    margin-top:5px;
+}

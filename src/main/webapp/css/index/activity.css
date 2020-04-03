@@ -1,0 +1,98 @@
+body{
+margin-left: auto;
+margin-right: auto;
+width:1350px;
+height:2050px;
+background-color:rgb(150,180,255); 
+}
+#activity_order{
+    /* 设置宽度高度背景颜色 */
+    height: 40px; /*高度改为自动高度*/
+    width:1050px;
+    margin-left: 0;
+    /*background:rgb(30, 144, 255);*/
+    top: 0;/*离顶部的距离为0*/
+    /*margin-bottom: 15px;*/
+    margin-left:150px;
+}
+#activity_order ul{
+
+/*text-decoration: none;*/
+list-style-type: none;
+white-space:nowrap;
+overflow: hidden;
+padding: 0;
+width: auto;	
+}
+#activity_order li {
+    float:left; /* 使li内容横向浮动，即横向排列  */
+    margin-right:0%;  /* 两个li之间的距离*/
+    position: relative;
+    overflow: hidden;
+    list-style-type: none;
+}
+#activity_order li a{
+   /* 设置链接内容显示的格式*/
+    display: block; /* 把链接显示为块元素可使整个链接区域可点击 */
+    color:white;
+    padding: 0px;
+    overflow: hidden;
+    text-decoration: none; /* 去除下划线 */
+    font-size: 15px;
+    list-style-type: none;
+    margin-top:10px;
+}
+#activity_order li a:hover{
+    color: rgb(30,180,255);
+}
+.activity_title{
+width:1050px;
+height:50px;
+background:rgb(30, 144, 255);
+margin-top:10px;
+margin-left:150px;	
+
+}
+.activity_title1{
+width:1050px;
+height:100px;
+background:rgb(220, 220, 300);
+/*opacity:0.2;*/
+margin-top:10px;
+margin-left:150px;
+}
+.activity_title2{
+width:1050px;
+height:100px;
+background:rgb(220, 220, 300);
+/*opacity:0.2;*/
+margin-top:10px;
+margin-left:150px;
+}
+#img1{
+width:200px;
+height:100px;
+position:absolute;
+}
+#activity_title1-img{
+width:200px;
+height:100px;
+ 
+}
+#title1{
+	margin-left:210px;
+	/*background:red;*/
+	height:100px;
+	width:840px;
+	list-style-type: none;
+	
+}
+#title1 h3 a{
+	text-decoration: none;
+	color:#111;
+	front-size:30px;
+}
+#title1 h3 a:hover{
+    
+   color:rgb(100,180,255);
+}

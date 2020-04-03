@@ -1,0 +1,114 @@
+body{
+margin-left: auto;
+margin-right: auto;
+width:1350px;
+height:1950px; 
+background-color:rgb(150,180,255);
+}
+#activit_a_yorder{
+    /* 设置宽度高度背景颜色 */
+    height: 40px; /*高度改为自动高度*/
+    width:1050px;
+    margin-left: 0;
+    /*background:rgb(30, 144, 255);*/
+    top: 0;/*离顶部的距离为0*/
+    /*margin-bottom: 15px;*/
+    margin-left:150px;
+}
+#activit_a_yorder ul{
+
+/*text-decoration: none;*/
+list-style-type: none;
+white-space:nowrap;
+overflow: hidden;
+padding: 0;
+width: auto;	
+}
+#activit_a_yorder li {
+    float:left; /* 使li内容横向浮动，即横向排列  */
+    margin-right:0%;  /* 两个li之间的距离*/
+    position: relative;
+    overflow: hidden;
+    list-style-type: none;
+}
+#activit_a_yorder li a{
+   /* 设置链接内容显示的格式*/
+    display: block; /* 把链接显示为块元素可使整个链接区域可点击 */
+    color:white;
+    padding: 0px;
+    overflow: hidden;
+    text-decoration: none; /* 去除下划线 */
+    font-size: 15px;
+    list-style-type: none;
+    margin-top:10px;
+}
+#activit_a_yorder li a:hover{
+    color: rgb(30,180,255);
+}
+#activit_a_frame{
+width:1050px;
+height:1910px;
+/*background-color:yellow;*/
+margin-left:150px;
+border: rgb(217,217,217) solid 1px;
+margin-top:10px;
+}
+#title{
+	width:1050px;
+    height:30px;
+    /*background-color:yellow;*/
+    text-align:center;
+    }
+#subhd{
+	width:1050px;
+    height:20px;
+    /*background-color:yellow;*/
+    text-align:center;
+    magrin-top:-5px;
+}
+#from{
+	width:1050px;
+    height:20px;
+    /*background-color:yellow;*/
+    text-align:center;
+ 
+}
+#subject{
+	width:1050px;
+    height:1910px;
+  /* background-color:yellow;*/
+   margin-top:10px;
+}
+#subject_img{
+	
+	width:1050px;
+    height:300px;
+    text-align:center;
+   /* background-color:green;*/
+}
+#subject_img_1{
+	width:600px;
+    height:300px;
+}
+#subject_desc{
+	text-align:center;
+	width:1050px;
+    height:30px;
+    /*background-color:green;*/
+}
+#subject_img_2{
+	width:600px;
+    height:300px;
+}
+#subject_img_3{
+	width:600px;
+    height:300px;
+}
+#subject_img_4{
+	width:600px;
+    height:300px;
+}
+#subject_desc_1{
+	text-indent: 2em;
+	line-height: 1.5em;
+}

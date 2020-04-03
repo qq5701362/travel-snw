@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="UTF-8"/>
+	<title>shopping</title>
+	
+	<link rel="stylesheet" href="../css/index/shopping.css"/>
+	<script type="text/javascript" src="../js/util/cookie_util.js"></script>
+	<script type="text/javascript" src="../js/util/basevalue.js"></script>
+	<script type="text/javascript" src="../js/jq/jquery-3.4.1.min.js"></script>
+	<script type="text/javascript" src="../easyui/jquery.easyui.min.js"></script>
+	<script type="text/javascript" src="../js/mainPage.js"></script>
+	
+</head>
+
+<body>
+	<div id="shopping_head">
+		<div id="shopping_head_left">
+			<ul>
+				<li><a href="../html/mainPage.html">首页></a></li>
+				<li><a href="../html/shopping.html">购物</a></li>
+			
+			</ul> 
+		</div>
+		<div id="shopping_head_right">
+			<ul>
+				
+				<li><img  id="shoucang_img" src="../shop_images/shoucang.PNG" alt="1"/>我的收藏</li>
+				<li><img  id="gouwuche_img" src="../shop_images/gouwuche.PNG" alt="1"/>我的购物车</li>
+			</ul>
+		</div>
+      		
+	</div>
+	<div id="search">
+		<input type="text" placeholder="请输入..." name="" id="shop_search" value="" />
+        <button><i>搜索</i></button>
+		
+	</div>
+	<hr id="shop_hr1"></hr>
+	<div id="shop_frame_1">
+		<div id="frame_1_left">
+			<ul>
+				<div id="left_fruit"><li>水果</li></div>
+				<hr id="left_hr1"></hr>
+				<div id="left_seafood"><li>海鲜水产</li></div>
+				<hr id="left_hr1"></hr>
+				<div id="left_handicraft"><li>工艺品</li></div>
+				<hr id="left_hr1"></hr>
+				<div id="left_salability"><li>热销产品</li></div>
+				<hr id="left_hr1"></hr>
+				<div id="left_discount"><li>每日折扣</li></div>
+				<hr id="left_hr1"></hr>
+				<div id="left_other"><li>其他商品</li></div>
+				<hr id="left_hr1"></hr>
+			</ul>	
+		</div>
+		<div id="frame_1_centre">
+			<img id="centre_img" src="../shop_images/haixian.PNG"  alt="0"/>
+		</div>
+		<div id="frame_1_right">
+			<img id="right_img1" src="../shop_images/52cb.jpg"  alt="0"/>
+	        <img id="right_img2" src="../shop_images/100_2.jpg"  alt="0"/>
+			
+		</div>	
+				
+	
+	</div>
+	<div id="shop_subhead_1">
+		水果
+	</div>
+	<div id="shop_frame_2">
+		<div class="frame_2_1" id="shop_fruit_1">
+			<img class="frame_2_1_img" id="fruit_img_1" src="../shop_images/lizhi.jpg"  alt="0"/>
+			<div class="frame_2_1_desc" id="fruit_desc_1">
+				<p id="fruit_1_price">￥12.00</p>
+				<p id="fruit_desc_1">现货新鲜现摘妃子笑荔枝3斤起包邮顺丰</p>
+			</div>
+			<div class="frame_2_1_last" id="shop_fruit_last_1">
+				<button  class="shop_cart" id="fruit_cart_1">加入购物车</button>
+				<button class="shop_buy" id="fruit_buy_1">购买</button>
+			</div>
+		</div>
+		<div class="frame_2_1" id="shop_fruit_2">
+			<img class="frame_2_1_img"  id="fruit_img_2" src="../shop_images/fanshiliu.png"  alt="0"/>
+		    <div class="frame_2_1_desc" id="fruit_desc_2">
+				<p id="fruit_2_price">￥12.00</p>
+				<p id="fruit_desc_2">现货新鲜现摘番石榴3斤起包邮顺丰</p>
+			</div>
+			<div class="frame_2_1_last" id="shop_fruit_last_2">
+				<button  class="shop_cart" id="fruit_cart_2">加入购物车</button>
+				<button class="shop_buy" id="fruit_buy_2">购买</button>
+			</div>
+		</div>
+		<div class="frame_2_1" id="shop_fruit_3">
+			<img class="frame_2_1_img"  id="fruit_img_3" src="../shop_images/longyan.jpg"  alt="0"/>
+			<div class="frame_2_1_desc" id="fruit_desc_3">
+				<p id="fruit_3_price">￥12.00</p>
+				<p id="fruit_desc_3">现货新鲜现摘龙眼3斤起包邮顺丰</p>
+			</div>
+			<div class="frame_2_1_last" id="shop_fruit_last_3">
+				<button  class="shop_cart" id="fruit_cart_3">加入购物车</button>
+				<button class="shop_buy" id=fruit_buy_3">购买</button>
+			</div>
+		</div>
+		<div class="frame_2_1" id="shop_fruit_4">
+			<img class="frame_2_1_img"  id="fruit_img_4" src="../shop_images/JPEG1.jpg"  alt="0"/>
+			<div class="frame_2_1_desc" id="fruit_desc_4">
+				<p id="fruit_4_price">￥12.00</p>
+				<p id="fruit_desc_4">现货新鲜现摘百香果3斤起包邮顺丰</p>
+			</div>
+			<div class="frame_2_1_last" id="shop_fruit_last_4">
+				<button  class="shop_cart" id="fruit_cart_4">加入购物车</button>
+				<button class="shop_buy" id="fruit_buy_4">购买</button>
+			</div>
+		</div>
+		<div class="frame_2_1" id="shop_fruit_5">
+			<img class="frame_2_1_img"  id="fruit_img_5" src="../shop_images/gp0.jpg"  alt="0"/>
+			<div class="frame_2_1_desc" id="fruit_desc_5">
+				<p id="fruit_5_price">￥15.00</p>
+				<p id="fruit_desc_5">现货新鲜现摘三华李3斤起包邮顺丰</p>
+			</div>
+			<div class="frame_2_1_last" id="shop_fruit_last_4">
+				<button  class="shop_cart" id="fruit_cart_5">加入购物车</button>
+				<button class="shop_buy" id="fruit_buy_5">购买</button>
+			</div>
+		</div>
+	</div>
+	
+	<div id="shop_subhead_1">
+		海鲜水产
+	</div>
+	<div id="shop_frame_2">
+		<div class="frame_2_1" id="shop_seafood_1">
+			<img class="frame_2_1_img" id="seafood_img_1" src="../shop_images/shenghao.jpg"  alt="0"/>
+			<div class="frame_2_1_desc" id="shop_seafood_desc_1">
+				<p id="seafood_1_price">￥30.00</p>
+				<p id="seafood_desc_1">现货新鲜现钦州大蚝5斤起包邮顺丰</p>
+			</div>
+			<div class="frame_2_1_last" id="shop_seafood_last_1">
+				<button  class="shop_cart" id="seafood_cart_1">加入购物车</button>
+				<button class="shop_buy" id="seafood_buy_1">购买</button>
+			</div>
+		</div>
+		<div class="frame_2_1" id="shop_seafood_2">
+			<img class="frame_2_1_img" id="seafood_img_2" src="../shop_images/duixia.jpg"  alt="0"/>
+		    <div class="frame_2_1_desc" id="shop_seafood_desc_2">
+				<p id="seafood_2_price">￥30.00</p>
+				<p id="seafood_desc_2">现货新鲜对虾3斤起包邮顺丰</p>
+			</div>
+			<div class="frame_2_1_last" id="shop_seafood_last_2">
+				<button  class="shop_cart" id="seafood_cart_2">加入购物车</button>
+				<button class="shop_buy" id="seafood_buy_2">购买</button>
+			</div>
+		</div>
+		<div class="frame_2_1" id="shop_seafood_3">
+			<img class="frame_2_1_img" id="seafood_img_3" src="../shop_images/xiaoyugan.jpeg"  alt="0"/>
+			<div class="frame_2_1_desc" id="shop_seafood_desc_3">
+				<p id="seafood_3_price">￥36.00</p>
+				<p id="seafood_desc_3">现货小鱼干3斤起包邮顺丰</p>
+			</div>
+			<div class="frame_2_1_last" id="shop_seafood_last_3">
+				<button  class="shop_cart" id="seafood_cart_3">加入购物车</button>
+				<button class="shop_buy" id="seafood_buy_3">购买</button>
+			</div>
+		</div>
+		<div class="frame_2_1" id="shop_seafood_4">
+			<img class="frame_2_1_img" id="seafood_img_4" src="../shop_images/hailuo.jpg"  alt="0"/>
+			<div class="frame_2_1_desc" id="shop_seafood_desc_4">
+				<p id="seafood_4_price">￥45.00</p>
+				<p id="seafood_desc_4">现货新鲜海螺5斤起包邮顺丰</p>
+			</div>
+			<div class="frame_2_1_last" id="shop_seafood_last_4">
+				<button  class="shop_cart" id="seafood_cart_4">加入购物车</button>
+				<button class="shop_buy" id="seafood_buy_4">购买</button>
+			</div>
+		</div>
+		<div class="frame_2_1" id="shop_seafood_5">
+			<img class="frame_2_1_img" id="seafood_img_5" src="../shop_images/shachong.jpg"  alt="0"/>
+			<div  class="frame_2_1_desc" id="shop_seafood_desc_5">
+				<p id="seafood_5_price">￥90.00</p>
+				<p id="seafood_desc_5">沙虫干3斤起包邮顺丰</p>
+			</div>
+			<div class="frame_2_1_last" id="shop_seafood_last_5">
+				<button  class="shop_cart" id="seafood_cart_5">加入购物车</button>
+				<button class="shop_buy" id="seafood_buy_5">购买</button>
+			</div>
+		</div>
+	</div>
+	
+	<div id="shop_subhead_1">
+		工艺品
+	</div>
+	<div id="shop_frame_2">
+		<div class="frame_2_1" id="shop_handicraft_1">
+			<img class="frame_2_1_img" id="handicraft_img_1" src="../shop_images/tuzi.jpg"  alt="0"/>
+			<div class="frame_2_1_desc" id="shop_handicraft_desc_1">
+				<p id="handicraft_1_price">￥25.00</p>
+				<p id="handicraft_desc_1">纯手工制作贝壳工艺品包邮顺丰</p>
+			</div>
+			<div class="frame_2_1_last" id="shop_handicraft_last_1">
+				<button  class="shop_cart" id="handicraft_cart_1">加入购物车</button>
+				<button class="shop_buy" id="handicraft_buy_1">购买</button>
+			</div>
+		</div>
+		<div class="frame_2_1" id="shop_handicraft_2">
+			<img class="frame_2_1_img"  id="handicraft_img_2" src="../shop_images/guopan.jpg"  alt="0"/>
+		    <div class="frame_2_1_desc" id="shop_handicraft_desc_2">
+				<p id="handicraft_2_price">￥25.00</p>
+				<p id="handicraft_desc_1">纯手工制作竹制果盘邮顺丰</p>
+			</div>
+			<div class="frame_2_1_last" id="shop_handicraft_last_2">
+				<button  class="shop_cart" id="handicraft_cart_2">加入购物车</button>
+				<button class="shop_buy" id="handicraft_buy_2">购买</button>
+			</div>
+		</div>
+		<div class="frame_2_1" id="shop_handicraft_3">
+			<img class="frame_2_1_img"  id="handicraft_img_3" src="../shop_images/xianglian.jpg"  alt="0"/>
+			<div class="frame_2_1_desc" id="shop_handicraft_desc_3">
+				<p id="handicraft_3_price">￥125.00</p>
+				<p id="handicraft_desc_1">纯手工制作贝壳项链包邮顺丰</p>
+			</div>
+			<div class="frame_2_1_last" id="shop_handicraft_last_3">
+				<button  class="shop_cart" id="handicraft_cart_3">加入购物车</button>
+				<button class="shop_buy" id="handicraft_buy_3">购买</button>
+			</div>
+		</div>
+		<div class="frame_2_1" id="shop_handicraft_4">
+			<img class="frame_2_1_img"  id="handicraft_img_4" src="../shop_images/chahu.jpg"  alt="0"/>
+			<div class="frame_2_1_desc" id="shop_handicraft_desc_4">
+				<p id="handicraft_4_price">￥150.00</p>
+				<p id="handicraft_desc_1">钦州坭兴陶茶壶周宇蛟纯手工紫砂建水紫陶壶泥兴陶茶具包邮顺丰</p>
+			</div>
+			<div class="frame_2_1_last" id="shop_handicraft_last_4">
+				<button  class="shop_cart" id="handicraft_cart_4">加入购物车</button>
+				<button class="shop_buy" id="handicraft_buy_4">购买</button>
+			</div>
+		</div>
+		<div class="frame_2_1" id="shop_handicraft_5">
+			<img class="frame_2_1_img"  id="handicraft_img_5" src="../shop_images/ma.jpg"  alt="0"/>
+			<div class="frame_2_1_desc" id="shop_handicraft_desc_5">
+				<p id="handicraft_5_price">￥25.00</p>
+				<p id="handicraft_desc_1">纯手工制作贝壳工艺品包邮顺丰</p>
+			</div>
+			<div class="frame_2_1_last" id="shop_handicraft_last_5">
+				<button  class="shop_cart" id="handicraft_cart_5">加入购物车</button>
+				<button class="shop_buy" id="handicraft_buy_5">购买</button>
+			</div>
+		</div>
+	</div>
+	
+	<div id="shop_subhead_1">
+		热销产品
+	</div>
+	<div id="shop_frame_2">
+		<div class="frame_2_1" id="shop_salability_1">
+			<img class="frame_2_1_img" id="salability_img_1" src="../shop_images/lizhi.jpg"  alt="0"/>
+			<div class="frame_2_1_desc" id="shop_salability_desc_1">
+				<p id="salability_1_price">￥12.00</p>
+				<p id="salability_desc_1">现货新鲜现摘妃子笑荔枝3斤起包邮顺丰</p>
+			</div>
+			<div class="frame_2_1_last" id="shop_salability_last_1">
+				<button  class="shop_cart" id="salability_cart_1">加入购物车</button>
+				<button class="shop_buy" id="salability_buy_1">购买</button>
+			</div>
+		</div>
+		<div class="frame_2_1" id="shop_salability_2">
+			<img class="frame_2_1_img" id="salability_img_2" src="../shop_images/shenghao.jpg"  alt="0"/>
+		    <div class="frame_2_1_desc" id="shop_salability_desc_2">
+				<p id="salability_2_price">￥30.00</p>
+				<p id="salability_desc_2">现货新鲜现钦州大蚝5斤起包邮顺丰</p>
+			</div>
+			<div class="frame_2_1_last" id="shop_salability_last_2">
+				<button  class="shop_cart" id="salability_cart_2">加入购物车</button>
+				<button class="shop_buy" id="salability_buy_2">购买</button>
+			</div>
+		</div>
+		<div class="frame_2_1" id="shop_salability_3">
+			<img class="frame_2_1_img" id="salability_img_3" src="../shop_images/longyan.jpg"  alt="0"/>
+			<div class="frame_2_1_desc" id="shop_salability_desc_3">
+				<p id="salability_3_price">￥12.00</p>
+				<p id="salability_desc_3">现货新鲜现摘龙眼3斤起包邮顺丰</p>
+			</div>
+			<div class="frame_2_1_last" id="shop_salability_last_3">
+				<button  class="shop_cart" id="salability_cart_3">加入购物车</button>
+				<button class="shop_buy" id="salability_buy_3">购买</button>
+			</div>
+		</div>
+		<div class="frame_2_1" id="shop_salability_4">
+			<img class="frame_2_1_img" id="salability_img_4" src="../shop_images/xianglian.jpg"  alt="0"/>
+			<div class="frame_2_1_desc" id="shop_salability_desc_4">
+				<p id="salability_4_price">￥125.00</p>
+				<p id="salability_desc_4">纯手工制作贝壳项链包邮顺丰</p>
+				
+			</div>
+			<div class="frame_2_1_last" id="shop_salability_last_4">
+				<button  class="shop_cart" id="salability_cart_4">加入购物车</button>
+				<button class="shop_buy" id="salability_buy_4">购买</button>
+			</div>
+		</div>
+		<div class="frame_2_1" id="shop_salability_5">
+			<img class="frame_2_1_img" id="salability_img_5" src="../shop_images/gp0.jpg"  alt="0"/>
+			<div class="frame_2_1_desc" id="shop_salability_desc_5">
+				<p id="salability_5_price">￥15.00</p>
+				<p id="salability_desc_5">现货新鲜现摘三华李3斤起包邮顺丰</p>
+			</div>
+			<div class="frame_2_1_last" id="shop_salability_last_5">
+				<button  class="shop_cart" id="salability_cart_5">加入购物车</button>
+				<button class="shop_buy" id="salability_buy_5">购买</button>
+			</div>
+		</div>
+	</div>
+	
+	<div id="shop_subhead_1">
+		每日折扣
+	</div>
+	<div id="shop_frame_2">
+		<div class="frame_2_1" id="shop_discount_1">
+			<img class="frame_2_1_img" id="discount_img_1" src="../shop_images/juzi.jpg"  alt="0"/>
+			<div class="frame_2_1_desc" id="shop_discount_desc_1">
+				<p id="discount_1_price">￥25.00</p>
+				<p id="discoun_desc_1">现货新鲜现皇帝柑5斤起包邮顺丰</p>
+			</div>
+			<div class="frame_2_1_last" id="shop_discount_last_1">
+				<button  class="shop_cart" id="discount_cart_1">加入购物车</button>
+				<button class="shop_buy" id="discount_buy_1">购买</button>
+			</div>
+		</div>
+		<div class="frame_2_1" id="shop_discount_2">
+			<img class="frame_2_1_img" id="discount_img_2" src="../shop_images/fanshiliu.png"  alt="0"/>
+		    <div class="frame_2_1_desc" id="shop_discount_desc_2">
+				<p id="discount_2_price">￥15.00</p>
+				<p id="discoun_desc_2">现货新鲜现摘番石榴5斤起包邮顺丰</p>
+			</div>
+			<div class="frame_2_1_last" id="shop_discount_last_2">
+				<button  class="shop_cart" id="discount_cart_2">加入购物车</button>
+				<button class="shop_buy" id="discount_buy_2">购买</button>
+			</div>
+		</div>
+		<div class="frame_2_1" id="shop_discount_3">
+			<img class="frame_2_1_img" id="discount_img_3" src="../shop_images/shachong.jpg"  alt="0"/>
+			<div class="frame_2_1_desc" id="shop_discount_desc_3">
+				<p id="discount_3_price">￥150.00</p>
+				<p id="discoun_desc_3">沙虫干2斤包邮顺丰</p>
+			</div>
+			<div class="frame_2_1_last" id="shop_discount_last_3">
+				<button  class="shop_cart" id="discount_cart_3">加入购物车</button>
+				<button class="shop_buy" id="discount_buy_3">购买</button>
+			</div>
+		</div>
+		<div class="frame_2_1" id="shop_discount_4">
+			<img class="frame_2_1_img" id="discount_img_4" src="../shop_images/JPEG1.jpg"  alt="0"/>
+			<div class="frame_2_1_desc" id="shop_discount_desc_4">
+				<p id="discount_4_price">￥16.00</p>
+				<p id="discoun_desc_4">现货新鲜现摘百香果5斤起包邮顺丰</p>
+			</div>
+			<div class="frame_2_1_last" id="shop_discount_last_4">
+				<button  class="shop_cart" id="discount_cart_4">加入购物车</button>
+				<button class="shop_buy" id="discount_buy_4">购买</button>
+			</div>
+		</div>
+		<div class="frame_2_1" id="shop_discount_5">
+			<img class="frame_2_1_img" id="discount_img_5" src="../shop_images/duixia.jpg"  alt="0"/>
+			<div class="frame_2_1_desc" id="shop_discount_desc_5">
+				<p id="discount_5_price">￥40.00</p>
+				<p id="discoun_desc_5">现货新鲜对虾5斤包邮顺丰</p>
+			</div>
+			<div class="frame_2_1_last" id="shop_discount_last_5">
+				<button  class="shop_cart" id="discount_cart_5">加入购物车</button>
+				<button class="shop_buy" id="discount_buy_5">购买</button>
+			</div>
+		</div>
+	</div>
+	
+	<div id="shop_subhead_1">
+		其他商品
+	</div>
+	<div id="shop_frame_2">
+		<div class="frame_2_1" id="shop_other_1">
+			<img class="frame_2_1_img" id="other_img_1" src="../shop_images/haiyadan.jpg"  alt="0"/>
+			<div class="frame_2_1_desc" id="shop_other_desc_1">
+				<p id="other_1_price">￥24.00</p>
+				<p id="other_desc_1">现货钦州海鸭蛋3斤起包邮顺丰</p>
+			</div>
+			<div class="frame_2_1_last" id="shop_other_last_1">
+				<button  class="shop_cart" id="other_cart_1">加入购物车</button>
+				<button class="shop_buy" id="other_buy_1">购买</button>
+			</div>
+		</div>
+		<div class="frame_2_1" id="shop_other_2">
+			<img class="frame_2_1_img" id="other_img_2" src="../shop_images/zongzi.jpg"  alt="0"/>
+		    <div class="frame_2_1_desc" id="shop_other_desc_2">
+				<p id="other_2_price">￥20.00</p>
+				<p id="other_desc_2">灵山大肉粽包邮顺丰</p>
+			</div>
+			<div class="frame_2_1_last" id="shop_fruit_last_2">
+				<button  class="shop_cart" id="other_cart_2">加入购物车</button>
+				<button class="shop_buy" id="other_buy_2">购买</button>
+			</div>
+		</div>
+		<div class="frame_2_1" id="shop_other_3">
+			<img class="frame_2_1_img" id="other_img_3" src="../shop_images/huangguapi.jpeg"  alt="0"/>
+			<div class="frame_2_1_desc" id="shop_other_desc_3">
+				<p id="other_3_price">￥18.00</p>
+				<p id="other_desc_3">现货下饭生气黄瓜皮3斤起包邮顺丰</p>
+			</div>
+			<div class="frame_2_1_last" id="shop_other_last_3">
+				<button  class="shop_cart" id="other_cart_3">加入购物车</button>
+				<button class="shop_buy" id="other_buy_3">购买</button>
+			</div>
+		</div>
+		<div class="frame_2_1" id="shop_other_4">
+			<img class="frame_2_1_img" id="other_img_4" src="../shop_images/lizhijiu.jpg"  alt="0"/>
+			<div class="frame_2_1_desc" id="shop_other_desc_4">
+				<p id="other_4_price">￥90.00</p>
+				<p id="other_desc_4">香醇荔枝酒包邮顺丰</p>
+			</div>
+			<div class="frame_2_1_last" id="shop_other_last_4">
+				<button  class="shop_cart" id="other_cart_4">加入购物车</button>
+				<button class="shop_buy" id="other_buy_4">购买</button>
+			</div>
+		</div>
+		<div class="frame_2_1" id="shop_other_5">
+			<img class="frame_2_1_img" id="other_img_5" src="../shop_images/0911.jpg"  alt="0"/>
+			<div class="frame_2_1_desc" id="shop_fruit_desc_5">
+				<p id="other_5_price">￥90.00</p>
+				<p id="other_desc_5">浦北神蜉酒包邮顺丰</p>
+			</div>
+			<div class="frame_2_1_last" id="shop_other_last_5">
+				<button  class="shop_cart" id="other_cart_5">加入购物车</button>
+				<button class="shop_buy" id="other_buy_5">购买</button>
+			</div>
+		</div>
+	</div>
+	
+</body>
+</html>

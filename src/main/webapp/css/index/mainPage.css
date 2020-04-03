@@ -20,14 +20,14 @@ background-color:rgb(150,180,255);
 center{
 	height: 80px; /*高度改为自动高度*/
     width:1150px;
-    /*background:red;*/
+    background:red;
     position:absolute;
 }
 
 .mainPage_log{
 	height: 80px; /*高度改为自动高度*/
     width:200px;
-   /* background:yellow;*/
+   background:yellow;
     
     margin-left:1150px;
 }
@@ -277,10 +277,10 @@ center{
 }
 .middle{
  width:1350px;
- height:1490px; 
+ height:1110px; 
  overflow: hidden;
  position:relative;
- background-color: yellow;
+ /*background-color: yellow;*/
  margin-top: -15px;
 }
 .lunbo{
@@ -289,7 +289,7 @@ center{
  overflow: hidden;
  position:relative;
  margin-left: 0px;
- background-color: red;
+ /*background-color: red;*/
  float: left;
 }
 /*轮播图*/
@@ -388,11 +388,16 @@ center{
     /* 鼠标选中时字体变为黑色 */
     color: #111;
 }
-.snwtravel1{
+#maPa_snwtravel1{
     font-size: 30px;
     text-align: center;
     overflow: hidden;
 
+}
+.maPa_line1{
+	height:1px;
+	border:none;
+	border-top:1px solid #555555;
 }
 /*最新资讯*/
 .information{
@@ -408,6 +413,11 @@ center{
     font-size: 30px;
     text-align: center;
     overflow: hidden;
+}
+.maPa_line2{
+	height:1px;
+	border:none;
+	border-top:1px solid #555555;
 }
 .information2 a{
     display: block; /* 把链接显示为块元素可使整个链接区域可点击 */
@@ -450,13 +460,13 @@ center{
 }
 .scenic{
     width: 1350px;
-    height:650px;
-    background: red;
+    height:320px;
+    background: #ffff00;
     margin-top: 10px;
    
 }
 
-.scenic1{
+.scenic_1{
     width: 200px;
     height: 280px;
     float: left;
@@ -466,30 +476,32 @@ center{
     margin-left:20px;
     
 }
-.scenic1-img{
+.scenic_1_img{
    width: 200px;
    height: 130px; 
 }
-.scenic1-1{
+.scenic_1_1{
     width: 200px;
-    height: 300px;
+    height: 150px;
     background: blue;
     border: rgb(217,217,217) solid 1px;
     
 }
-
-.scenic1-1-img{
+.scenic_1_2{
+    width: 200px;
+    height: 150px;
+    background: red;
+    border: rgb(217,217,217) solid 1px;
+    
+}
+.scenic_1_1_img{
     width: 200px;
     height: 115px;
     margin-left: 0px;
     
 }
-.san{
-	width: 200px;
-    height: 180px;
-    background:white;
-}
-.scenic1-1-desc{
+
+.scenic_1_1_desc{
     font-size: 15px;
     margin-left: 0px;
     width: 200px;
@@ -505,32 +517,32 @@ center{
 
 .scenic1-2{
     width: 200px;
-    height: 300px;
-    background: green;
+    height: 150px;
+    /*background: green;*/
     border: rgb(217,217,217) solid 1px;
 }
 .last{
     width: 1350px;
     height: 350px;
-    background: green;
+    /*background: green;*/
     
 
 }
 .characteristic{
     width: 656px;
     height: 350px;
-   background: red;
+  /* background: red;*/
     float: left;
     border: rgb(217,217,217) solid 1px;
     left: 10px;
     margin-left:10px;
 }
-.cate{
+.characteristic_1{
     width: 656px;
     height: 70px;
    background: rgb(20, 100, 255);
 }
-.cate1 {
+.characteristic_1_1 {
     font-size: 30px;
     margin-left: 10px;
     overflow: hidden;
@@ -538,7 +550,7 @@ center{
     size: center;
 }
 
-.cate2{
+.characteristic_2{
     width: 160px;
     height: 280px;
     float: left;
@@ -547,29 +559,29 @@ center{
     margin-left:2px;
      
 }
-.cate2-1{
+.characteristic_2_1{
     width: 160px;
     height: 180px;
     margin:10px auto;
 }
-.cate2-1-img{
+.characteristic_2_1_img{
     width: 160px;
     height: 150px;
     border-radius:50%;
 }
 
  
-.cate2-1-desc{
+.characteristic_2_1_desc{
   width: 160px;
   height:100px;  
 }
-.Homestay-title{
+.Homestay_title{
   width: 656px;
   height:70px;
 background: rgb(20, 100, 255); 
   
 }
-.Homestay-title1{
+.Homestay_title_1{
    font-size: 30px;
     margin-left: 10px;
     overflow: hidden;
@@ -584,7 +596,7 @@ background: rgb(20, 100, 255);
     left: 0px;
     margin-left:2px;
 }
-.Homestay-img{
+.Homestay_img{
     width: 160px;
     height:220px;
 }
