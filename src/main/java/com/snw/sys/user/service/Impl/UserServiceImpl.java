@@ -3,6 +3,7 @@ package com.snw.sys.user.service.Impl;
 import java.util.HashMap;
 import java.util.List;
 
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -24,9 +25,11 @@ public class UserServiceImpl implements UserService {
      */
     @Autowired
     private UserDao userDao;
+    private Logger log = Logger.getLogger(UserServiceImpl.class);
 
     public User login(String account, String pswd) throws NameException, PasswordException {
 
+    	 log.info("前端登陆的账号和密码："+account+","+pswd);
         //参数格式校验
         if(account==null || account.trim().isEmpty()){
             throw new NameException("用户名不能为空");
@@ -40,10 +43,10 @@ public class UserServiceImpl implements UserService {
         if(user==null){
             throw new NameException("用户名错误");
         }
-        System.out.println("数据库拿到的密码为："+user.getPswd());
-        System.out.println("原始密码为"+pswd);
+        log.info("数据库拿到的密码为："+user.getPswd());
+        log.info("前端发送的原始密码为"+pswd);
         String md5Password=NoteUtil.md5(pswd);
-        System.out.println("加密密码为："+md5Password);
+        log.info("前端加密密码为："+md5Password);
         if(user.getPswd().equals(md5Password)){
             return user;
         }else{
@@ -64,7 +67,8 @@ public class UserServiceImpl implements UserService {
      */
     public User regist(String account, String pswd, String user_name) throws NameException, PasswordException {
 
-        //�?测用户名是否存在
+    	log.info("前端注册的账号、密码和昵称为："+account+","+pswd+","+user_name);
+        //检测用户名是否存在
         User user=userDao.findUserByName(account);
         if(user!=null){
             throw new NameException("用户名被占用");

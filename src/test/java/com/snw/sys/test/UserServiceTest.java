@@ -52,9 +52,9 @@ public class UserServiceTest extends TestBase {
 	
 	@Test
 	public void testRegist () {
-		String account = "wangk1";
-		String pswd = "112321";
-		String user_name = "王五661";
+		String account = "wanggk";
+		String pswd = "111111";
+		String user_name = "王五";
 		userService.regist(account, pswd, user_name);
 	}
 	
@@ -69,7 +69,7 @@ public class UserServiceTest extends TestBase {
 	@Test
 	public void testLogin () {
 		String account = "wanggk";
-		String pswd = "1122";
+		String pswd = "111111";
 		User login = userService.login(account, pswd);
 		System.out.println("用户的密码："+login.getPswd());
 		
