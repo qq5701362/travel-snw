@@ -2,6 +2,7 @@ $(function(){
 	
 	jinQu();
 	
+	
 	//获取cookie
 	getCachceCookie ();
 	
@@ -185,21 +186,32 @@ function login(){
 				if(result.state==0){
 					//成功
 					var user=result.data;
-					debugger;
 					addCookie("userId",user.id,2);
 					//关闭弹窗
 					cancelLogin();
 					//隐藏注册和登录按钮，显示退出按钮
 					$("#mainPage_registWindown").attr("style","display:none;");
 					$("#mainPage_loginWindown").attr("style","display:none;");
-					
+					$("#mainPage_signOut").attr("style","display:block;");
+					debugger;
 					//通过用户id判断是否是超级管理员
 					if (user.id === 10000) {
-						//跳转去管理页面
-						window.location.href="admin.html";
+						debugger;
+						/**
+						 * 
+						 * 跳转去管理页面
+						 * 		http://localhost:8081/travel-snw/html/admin.html
+						 * window.location.href和window.open的区别：
+						 * 	前者是重定位当前页面(刷新当前页面)，后者是新开一个页面。
+						 * 
+						 * 具体可参考博客：https://www.cnblogs.com/Qian123/p/5345298.html
+						 * 
+						 */
+//						window.location.href="admin.html"; //刷新当前页面
+						window.open('serviceManage/adminPage.html'); //当id为1000的时候，新开一个页面
 					} else {
 						//普通用户
-						$("#mainPage_signOut").attr("style","display:block;");
+						//TODO 普通用户目前没其他操作
 					}
 					
 					
@@ -259,6 +271,9 @@ function jinQu () {
 	$(".san_btn").click(function(e) {
         $(".san_intr").toggle()});
 }
+
+/*
+ * 好像有问题，先注释
 
 //轮播图代码开始
 var imgCount = 5;
@@ -331,5 +346,4 @@ function nextPage(next){
     $('.list').animate({left:targetLeft+'px'});
     //更新后的圆点加上样式
     $(buttonSpan[index-1]).addClass('on');
-}
-
+}*/
