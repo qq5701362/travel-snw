@@ -72,7 +72,7 @@ center{
             
             position: fixed;
             width: 500px;
-            height: 400px;
+            height:300px;
             top:50%;
             left: 50%;
             z-index: 3;
@@ -81,17 +81,17 @@ center{
             
 
         }
-        .modal-img{
+        .modal-img-1{
         width: 500px;
-        height: 400px;
+        height: 300px;
         
         
         }
         .bg{
         width: 500px;
-        height: 400px;
-        background:yellow;
-        margin-top: -404px;
+        height: 300px;
+        /*background:yellow;*/
+        margin-top: -304px;
         }
 		#modal p {
 			margin-left:80px;
@@ -150,7 +150,7 @@ center{
             
             position: fixed;
             width: 500px;
-            height: 400px;
+            height: 200px;
             top:50%;
             left: 50%;
             z-index: 3;
@@ -161,15 +161,15 @@ center{
         }
         .modal-img{
         width:500px;
-        height: 400px;
+        height: 200px;
         
         
         }
         .bg1{
         width: 500px;
-        height: 400px;
-        /*background:yellow;*/
-        margin-top: -404px;
+        height: 200px;
+        background:yellow;
+        margin-top: -204px;
         }
 		#modal p {
 			margin-left:80px;
