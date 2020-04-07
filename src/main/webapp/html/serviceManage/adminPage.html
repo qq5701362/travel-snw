@@ -7,7 +7,7 @@
 	
 	<link rel="stylesheet" href="../../css/serviceManage/adminPage.css"/>
 	<script type="text/javascript" src="../../js/util/basevalue.js"></script>
-	<script type="text/javascript" src="../../js/mainPage.js"></script>
+	<script type="text/javascript" src="../../js/serviceManage/adminPage.js"></script>
 	<script type="text/javascript" src="../../easyui/jquery.min.js"></script>
 	<script type="text/javascript" src="../../easyui/jquery.easyui.min.js"></script>
 	<script type="text/javascript" src="../../easyui/locale/easyui-lang-zh_CN.js"></script>
@@ -15,7 +15,7 @@
 	<link id="adminPage_themeLink" rel="stylesheet" type="text/css" href="../../easyui/themes/default/easyui.css">
 
 	<style type="text/css">
-		ul{
+		ul{ 
 			line-height: 30px;
 		}
 	</style>
@@ -77,7 +77,7 @@
 		    <div title="商品管理" data-options="iconCls:'icon-reload',selected:true" style="padding:10px;">   
 		       <ul>
 		       	 <li><a href="javascript:void(0)" pageUrl="product_manage.html">商品信息管理</a></li>
-		       	 <li><a href="javascript:void(0)" pageUrl="product_down.jsp">商品上下架管理</a></li>
+		       	 <li><a href="javascript:void(0)" pageUrl="#">商品上下架管理</a></li>
 		       </ul>
 		    </div>     
 		</div>  
@@ -92,10 +92,10 @@
 		</div>  
     </div> 
     
-    
+    <!-- 
     <script type="text/javascript">
     	$(function(){
-    		//给a标签绑定时间
+    		//给a标签绑定事件
     		$("a[pageUrl]").click(function(){
     			debugger;
     			//1.获取pageUrl属性值（需要跳转的页面地址）
@@ -134,9 +134,12 @@
     				$("#adminPage_themeLink").attr("href",href);
     			}
     		});
+    		
+    		
     	});
     
-    </script>  
+    </script>   -->
+    
   </body>
 
 </html>
