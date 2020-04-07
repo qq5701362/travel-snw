@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+table{
+    width: 1200px;
+    /* background: lightcoral; */
+    margin: 50px auto;
+}
+tr:nth-child(1){
+    background: #F3F3F3;
+    height: 26px;
+}
+img{
+    height: 30%;
+    vertical-align: middle;
+}
+img+span{
+    font-size: 10px;
+}
+td{
+    text-align: center;
+    vertical-align: middle;
+}
+tr td:nth-child(2){
+    text-align: left;
+}
+tr td:nth-child(4) div button{
+    height: 20px;
+    width: 20px;
+    border: none;
+    text-align: center;
+    vertical-align: middle;
+}
+tr td:nth-child(4) div input{
+    height: 20px;
+    width: 27px;
+    vertical-align: middle;
+}
+tr td:nth-child(3),tr td:nth-child(5){
+    width: 100px;
+}
+table>div{
+    width: 300px;
+    text-align: right;
+}
