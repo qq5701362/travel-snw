@@ -10,10 +10,9 @@ $(function(){
      * 切换风格事件
      */
     $("#adminPage_Themesmeus").menu({
-    	onClick:function(item){
-    		debugger;
-    		themesmeus(item);
-    	}
+        onClick:function(item){
+            themesmeus(item);
+        }
     });
     
 })
