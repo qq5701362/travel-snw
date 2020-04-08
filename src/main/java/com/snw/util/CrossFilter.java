@@ -15,24 +15,24 @@ import javax.servlet.http.HttpServletResponse;
 
 public class CrossFilter implements Filter {
 
-	private static final boolean debug = true;
-	private FilterConfig filterConfig = null;
-	
-	public CrossFilter() {
-		super();
-	}
+    private static final boolean debug = true;
+    private FilterConfig filterConfig = null;
+    
+    public CrossFilter() {
+        super();
+    }
  
-	public void init(FilterConfig filterConfig) throws ServletException {
-		this.filterConfig = filterConfig;
+    public void init(FilterConfig filterConfig) throws ServletException {
+        this.filterConfig = filterConfig;
         if (filterConfig != null) {
             if (debug) {                
                 log("CrossFilter:Initializing filter");
             }
         }
  
-	}
-	
-	 @Override
+    }
+    
+     @Override
     public String toString() {
         if (filterConfig == null) {
             return ("CrossFilter()");
@@ -43,17 +43,17 @@ public class CrossFilter implements Filter {
         return (sb.toString());
     }
  
-	public void doFilter(ServletRequest request, ServletResponse response,
-			FilterChain chain) throws IOException, ServletException {
-		if (debug) {
-			log("CrossFilter:doFilter()");
+    public void doFilter(ServletRequest request, ServletResponse response,
+            FilterChain chain) throws IOException, ServletException {
+        if (debug) {
+            log("CrossFilter:doFilter()");
         }
  
          if(response instanceof HttpServletResponse){
-        	 HttpServletResponse alteredResponse = ((HttpServletResponse)response);
-	        // I need to find a way to make sure this only gets called on 200-300 http responses
-	        // TODO: see above comment
-        	 addHeadersFor200Response(alteredResponse);
+             HttpServletResponse alteredResponse = ((HttpServletResponse)response);
+            // I need to find a way to make sure this only gets called on 200-300 http responses
+            // TODO: see above comment
+             addHeadersFor200Response(alteredResponse);
          }
          doBeforeProcessing(request, response);
  
@@ -83,13 +83,13 @@ public class CrossFilter implements Filter {
          }
        
  
-	}
+    }
  
-	public void destroy() {
+    public void destroy() {
  
-	}
-	
-	private void doBeforeProcessing(ServletRequest request, ServletResponse response)
+    }
+    
+    private void doBeforeProcessing(ServletRequest request, ServletResponse response)
             throws IOException, ServletException {
         if (debug) {
             log("CrossFilter:DoBeforeProcessing");
@@ -100,7 +100,7 @@ public class CrossFilter implements Filter {
     private void doAfterProcessing(ServletRequest request, ServletResponse response)
             throws IOException, ServletException {
         if (debug) {
-        	log("CrossFilter:DoAfterProcessing");
+            log("CrossFilter:DoAfterProcessing");
         }
     }
     

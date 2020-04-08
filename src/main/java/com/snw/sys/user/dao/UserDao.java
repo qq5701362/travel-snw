@@ -9,20 +9,19 @@ import com.snw.sys.user.entity.User;
 /**
  * 
  * <p>Description: 用户信息表Dao</p>
- * @Date: 2019�?7�?8�? 
- * @Company Travelsky
- * @author wanggk
+ * @Date: 2020年04月09日
+ * @author author
  * @version V1.0  
  */
 public interface UserDao {
-	
-	/**
+    
+    /**
      * 登录
-     * @param params 参数，用户名和密�?
+     * @param params 参数，用户名和密�?
      * @return 用户
      */
     User login(Map<String, Object> params);
-	
+    
     
     /**
      * 
@@ -31,11 +30,11 @@ public interface UserDao {
      */
     int addUser(User user);
     
-	/**
-	 * 通过id删除
-	 * @param  Integer id  
-	 * @return int
-	 */
+    /**
+     * 通过id删除
+     * @param  Integer id  
+     * @return int
+     */
     int delete(User user);
 
     
@@ -68,6 +67,6 @@ public interface UserDao {
     int queryCount(HashMap<String,Object> map);
 
 
-	User findUserByName(String name);
+    User findUserByName(String name);
     
 }

@@ -15,6 +15,8 @@ import com.snw.util.NoteUtil;
 /**
  * 
  * <p>Description: 用户信息表服务类</p>
+ * @Date: 2020年04月09日
+ * @author author
  * @version V1.0  
  */
 @Service("userService")
