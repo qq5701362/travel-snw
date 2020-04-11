@@ -1,0 +1,98 @@
+/*提交按钮*/
+/* -------------
+ * Buttons
+ * ------------- */
+.button {
+	margin: 0px;
+	padding: 0px;
+	border: none;
+	background:#fff;
+	border:1px solid #c6c6c6;
+	width:180px;
+	height:50px;
+	margin-line:50px;
+	cursor: pointer;
+	overflow: visible;
+	font-family: Arial;
+}
+/*输入框*/
+/* -------------
+ * Inputs
+ * ------------- */
+
+
+#iDo-pay-1  {
+	margin-top:10px;
+}
+#iDo-pay-2 {
+	margin-top:10px;
+}
+#iDo-pay-3  {
+	margin-top:10px;
+}
+.txt-len-2{
+	border:1px solid #c6c6c6;
+	height: 27px;
+	padding: 0px;
+	float:left;
+}
+.txt-len-1 {
+	border:1px solid #c6c6c6;
+	height: 27px;
+	padding: 0px;
+	float:left;
+}
+.txt-len-3{
+	border:1px solid #c6c6c6;
+	height: 27px;
+	padding: 0px;
+	float:left;
+}
+#city{
+	margin-left:10px;
+}
+#county{
+	margin-left:10px;
+}
+.txt-len-4{
+	height: 22px;
+	width: 100px;
+}
+.txt-len-5{
+	height: 22px;
+	width: 100px;
+}
+.txt-len-6{
+	height: 22px;
+	width: 100px;
+}
+.txt-len-7{
+	border:1px solid #c6c6c6;
+	height: 27px;
+	padding: 0px;
+	float:left;
+}
+.txt-len-8{
+	border:1px solid #c6c6c6;
+	height: 27px;
+	padding: 0px;
+	float:left;
+}
+.iDoformInputInner {
+	padding: 0px;
+	margin: 0px;
+}
+
+.txt-len-4 {
+	height: 27px;
+	margin:0px;
+}
+.txt-len-5 {
+	height: 27px;
+	margin:0px;
+}
+.txt-len-6 {
+	height: 27px;
+	margin:0px;
+}
+

@@ -1,0 +1,743 @@
+html,body{
+    position: relative;
+    width: 100%;
+    min-height: 950px;
+}
+input[type="checkbox"]{
+    display: none;
+}
+label{
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+    border: 1px solid #b8b8b8;
+    margin-left: 10px;
+    border-radius: 1px;
+    width: 12px;
+    height: 12px;
+    cursor: pointer;
+}
+label.mark{
+    background: url("../shop_cart_images/mark1.png") no-repeat -1px -1px;
+}
+
+a:hover{
+    color: #ff873e;
+    text-decoration: underline;
+}
+
+#jiesuan_yorder{
+    /* 设置宽度高度背景颜色 */
+    height: 40px; /*高度改为自动高度*/
+    width:1050px;
+    margin-left: 0;
+    /*background:rgb(30, 144, 255);*/
+    top: 0;/*离顶部的距离为0*/
+    /*margin-bottom: 15px;*/
+    margin-left:80px;
+}
+#jiesuan_yorder ul{
+
+/*text-decoration: none;*/
+list-style-type: none;
+white-space:nowrap;
+overflow: hidden;
+padding: 0;
+width: auto;	
+}
+#jiesuan_yorder li {
+    float:left; /* 使li内容横向浮动，即横向排列  */
+    margin-right:0%;  /* 两个li之间的距离*/
+    position: relative;
+    overflow: hidden;
+    list-style-type: none;
+}
+#jiesuan_yorder li a{
+   /* 设置链接内容显示的格式*/
+    display: block; /* 把链接显示为块元素可使整个链接区域可点击 */
+    color:#000000;
+    padding: 0px;
+    overflow: hidden;
+    text-decoration: none; /* 去除下划线 */
+    font-size: 15px;
+    list-style-type: none;
+    margin-top:10px;
+}
+#jiesuan_yorder li a:hover{
+    color: rgb(30,180,255);
+}
+
+
+.cartMain{
+    position: relative;
+    width: 1200px;
+    min-width: 1200px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0px 0px 100px;
+    min-height: 210px;
+}
+
+
+/*购物车头部*/
+.cartMain_hd{
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    color: #3c3c3c;
+}
+.cartMain_hd .cartTop{
+    height: 50px;
+}
+.cartMain_hd .cartTop .list_chk{
+    width: 80px;
+    text-indent: 30px;
+}
+.cartMain_hd .cartTop .list_con{
+    width: 312px;
+}
+.cartMain_hd .cartTop .list_chk label{
+    position: absolute;
+    left: 10px;
+    top:19px;
+    margin: 0;
+}
+.cartMain_hd .cartTop .list_info{
+    padding: 0;
+    text-indent: 15px;
+}
+.cartMain_hd .cartTop .list_con{
+    text-indent: 140px;
+}
+
+
+.cartBox{
+    width: 100%;
+    margin-bottom: 15px;
+}
+.cartBox .shop_info{
+    position: relative;
+    width: 100%;
+    height: 38px;
+    background-color: #fff;
+    line-height: 38px;
+    vertical-align: baseline;
+}
+.cartBox .shop_info .all_check{
+    position: relative;
+    float: left;
+    width: 30px;
+    height: 38px;
+}
+
+.cartBox .shop_info .all_check input[type="checkbox"]{
+    position: absolute;
+    z-index: 0;
+    left: -20px;
+    top: -20px;
+}
+.cartBox .shop_info .all_check .shop{
+    position: absolute;
+    top:13px;
+}
+.cartBox .shop_info .shop_name{
+    float: left;
+}
+
+
+
+/*商品列表*/
+.cartBox .order_content{
+    border: 1px solid #ccc;
+}
+.cartBox .order_content a{
+    display: block;
+}
+.order_lists{
+    width: 100%;
+    height: 130px;
+    border-bottom: 1px solid #e7e7e7;
+}
+.order_lists:last-child{
+    border-bottom: none;
+}
+.order_lists li{
+    float: left;
+    height: 100%;
+}
+
+.order_lists .list_chk{
+    position: relative;
+    width: 50px;
+}
+.order_lists .list_chk input[type="checkbox"]{
+    position: absolute;
+    z-index: 0;
+    left: -20px;
+    top: -20px;
+}
+.order_lists .list_chk label{
+    margin: 20px 0 0 24px;
+}
+
+.order_lists .list_con{
+    width: 342px;
+}
+.order_lists .list_con .list_img{
+    width: 90px;
+    height: 90px;
+    margin-top: 20px;
+    float: left;
+}
+.order_lists .list_con .list_img img{
+    width: 70px;
+    height:70px;
+    vertical-align: top;
+    backgroud-color:yellow;
+}
+.order_lists .list_con .list_text{
+    margin: 20px 0 0 10px;
+    line-height: 18px;
+    width: 200px;
+    float: left;
+    backgroud-color:yellow;
+}
+.order_lists .list_con .list_text a{
+    color: #3c3c3c;
+}
+.order_lists .list_con .list_text a:hover{
+    color: #ff873e;
+    text-decoration: underline;
+}
+
+.order_lists .list_info{
+    width: 252px;
+    box-sizing: border-box;
+    padding: 20px 0;
+}
+.order_lists .list_info p{
+    color: #9c9c9c;
+    line-height: 18px;
+    margin-left: 15px;
+}
+.order_lists .list_price{
+    width: 130px;
+}
+.order_lists .list_price .price{
+    margin-top: 20px;
+    line-height: 18px;
+    font-family: Verdana,Tahoma,arial;
+    color: #3c3c3c;
+    font-weight: bold;
+}
+.order_lists .list_amount{
+    width: 120px;
+}
+.order_lists .list_amount .amount_box{
+    margin-top: 20px;
+    width: 77px;
+    height: 25px;
+    position: relative;
+}
+.order_lists .list_amount .amount_box input{
+    width: 39px;
+    height: 15px;
+    line-height: 15px;
+    border: 1px solid #aaa;
+    color: #343434;
+    text-align: center;
+    padding: 4px 0;
+    background-color: #fff;
+    z-index: 2;
+    position: absolute;
+    left: 18px;
+    float: left;
+}
+.order_lists .list_amount .amount_box a{
+    float: left;
+    height: 23px;
+    width: 17px;
+    border: 1px solid #e5e5e5;
+    background: #f0f0f0;
+    text-align: center;
+    line-height: 23px;
+    color: #444;
+    position: absolute;
+    top:0;
+}
+.order_lists .list_amount .amount_box a:hover{
+    border-color: #ff873e;
+    text-decoration: none;
+    color: #ff873e;
+    z-index: 3;
+}
+
+.order_lists .list_amount .amount_box .reduce{
+    left: 0;
+}
+
+.order_lists .list_amount .amount_box .reSty{
+    color: #cbcbcb;
+}
+.order_lists .list_amount .amount_box .reSty:hover{
+    border-right: none;
+    border-color: #e5e5e5;
+    text-decoration: none;
+    color: #cbcbcb;
+}
+
+.order_lists .list_amount .amount_box .plus{
+    border-left-color: transparent;
+    right: 0;
+}
+
+
+.order_lists .list_sum{
+    width: 140px;
+}
+.order_lists .list_sum .sum_price{
+    line-height: 18px;
+    margin-top: 20px;
+    font-family: Verdana,Tahoma,arial;
+    color: #ff0000;
+    font-weight: bold;
+}
+.order_lists .list_op{
+    width: 164px;
+}
+.order_lists .list_op .del{
+    margin-top: 20px;
+    line-height: 18px;
+}
+
+/*底部总计算价*/
+.bar-wrapper{
+    width: 1200px;
+    height: 50px;
+    position: fixed;
+    bottom: -1px;
+    z-index: 99;
+    background: #e5e5e5;
+}
+.bar-wrapper .bar-right{
+    float: right;
+    color: #3c3c3c;
+}
+.bar-wrapper .bar-right strong{
+    color: #f40;
+}
+
+.bar-wrapper .bar-right .piece{
+    float: left;
+    min-width: 110px;
+    margin-right: 20px;
+    height: 50px;
+    line-height: 50px;
+}
+.bar-wrapper .bar-right .piece .piece_num{
+    display: inline-block;
+    padding: 0 10px;
+    font-weight: 700;
+    font-size: 18px;
+    font-family: tohoma,arial;
+}
+.bar-wrapper .bar-right .totalMoney{
+    float: left;
+    min-width: 100px;
+    height: 50px;
+    line-height: 50px;
+}
+.bar-wrapper .bar-right .totalMoney .total_text{
+    float: right;
+    font-weight: 400;
+    font-size: 20px;
+    font-family: Arial;
+    vertical-align: middle;
+    margin-right: 10px;
+    margin-left: 15px;
+}
+.bar-wrapper .bar-right .calBtn{
+    float: left;
+}
+.bar-wrapper .bar-right .calBtn a{
+    display: block;
+    width: 120px;
+    height: 50px;
+    color: #fff;
+    background: #B0B0B0;
+    cursor: not-allowed;
+    font-size: 22px;
+    letter-spacing: 5px;
+    text-decoration: none;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 2px;
+}
+.bar-wrapper .bar-right .calBtn a.btn_sty{
+    background: #f40;
+    cursor: pointer;
+}
+
+/*自己定义的模态框*/
+.model_bg{
+    position: absolute;
+    top:0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0,0,0,.6);
+    z-index: 999;
+    display: none;
+}
+.my_model{
+    position: fixed;
+    display: none;
+    top:50%;
+    left: 50%;
+    margin-top: -50px;
+    margin-left: -200px;
+    z-index: 9999;
+    width: 360px;
+    height: 120px;
+    border: 1px solid #aeaeae;
+    border-radius: 3px;
+    padding: 20px;
+    background: #fff;
+}
+.my_model .title{
+    font-size: 14px;
+    color: #3c3c3c;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.my_model .title .closeModel{
+    float: right;
+    cursor: pointer;
+}
+.my_model p{
+    line-height:16px;
+}
+.my_model .opBtn{
+    margin-top: 20px;
+}
+.my_model .opBtn a{
+    width: 58px;
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    -ms-border-radius: 1px;
+    border-radius: 1px;
+    display: inline-block;
+    margin-right: 10px;
+    font-weight: 700;
+}
+.my_model .dialog-sure{
+    background: #52a0e5;
+    color: #fff;
+    border: 1px solid #52a0e5;
+}
+
+.my_model .dialog-close{
+    background: #fff;
+    border: 1px solid #d9d9d9;
+    color: #3c3c3c;
+}
+.address{
+	 float:left;
+	 overflow:hidden;
+}
+
+.iDo-info-p { height:45px; margin:0px; }
+.iDo-info-title { width:80px; display:inline-block; text-align:right; margin-right:10px; font-size:13px; height:29px; line-height:29px; _line-height:29px; float:left; }
+.iDo-info-box { float:left; overflow:hidden; height:29px; }
+.iDo-info-tips { float:left; overflow:hidden; height:29px; }
+.iDo-info-box b { float:left; width:23px; _width:15px; height:29px; line-height:29px; text-align:center; }
+.iDo-info-p i { font-style:normal; margin-left:10px; height:29px; line-height:29px; }
+.iDo-info-p i em { font-style:normal; display:inline-block; width:10px; font-family: "宋体"; color:#c40000; }
+
+.iDo-basic { padding:40px 0px 0px 20px; }
+.iDo-details { border-top:1px dashed #c6c6c6; border-bottom:1px dashed #c6c6c6; padding:20px 0px 20px 20px; margin:30px 0px; }
+.iDo-details .iDo-pay { display:inline-block; overflow:hidden; cursor:pointer; }
+.iDo-details .iDo-pay .iDoformRadioWrapper { margin:8.5px; }
+.iDo-details .iDo-pay label { float:left; font-size:13px; background-image:url(../images/pay-ico.png); background-repeat:no-repeat; height:29px; line-height:29px; overflow:hidden; padding:0 20px 0 26px; }
+.iDo-info-select { overflow:visible; }
+.iDo-pay-1 { background-position:00px 1px; float:left; color:#40a545; }
+.iDo-pay-2 { background-position:00px -24px; color:#ff7321; }
+.iDo-pay-3 { background-position:00px -50px; color:#006abf; }
+
+.iDoformHidden {display: none;}
+
+
+
+.Validform_wrong{ color:#c40000; }
+.Validform_right{ color:#0EAB25; }
+form.iDoformdone label{
+	margin-top:4px;
+	margin-right: 8px;
+	display: block;
+	float:left;
+}
+form.iDoformdone div.rowElem{
+	clear:both;
+	padding:4px 0px;
+}
+/* -------------
+ * Buttons
+ * ------------- */
+button.iDoformButton {
+	margin: 0px;
+	padding: 0px;
+	border: none;
+	background:#fff;
+	border:1px solid #c6c6c6;
+	width:180px;
+	height:50px;
+	cursor: pointer;
+	overflow: visible;
+	font-family: Arial;
+}
+
+*:first-child+html button.iDoformButton[type]{width: 1;} /* IE7 */
+
+/*hover*/
+button.iDoformButton_hover span span { background-position: left -33px ; }
+button.iDoformButton_hover span { background-position: right -33px ; }
+
+/*clicked*/
+button.iDoformButton_click span span { background-position: left -66px ; }
+button.iDoformButton_click span { background-position: right -66px ; }
+
+/* IE 6 */
+* html button.iDoformButton { height:33px; }
+* button.iDoformButton span span { height: 25px; }
+/* IE 7 */
+*+ html button.iDoformButton { height:33px; }
+*+ button.iDoformButton span span { height: 25px; }
+
+
+/* -------------
+ * Inputs
+ * ------------- */
+.iDoformInputWrapper {
+	border:1px solid #c6c6c6;
+	height: 27px;
+	padding: 0px;
+	float:left;
+}
+
+.iDoformInputInner {
+	padding: 0px;
+	margin: 0px;
+}
+
+.iDoformInputInner div {
+	height: 27px;
+	margin:0px;
+}
+
+.iDoformInputInner div input {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	line-height: 17px;
+	vertical-align: middle;
+	height: 17px;
+	color:#404040;	
+	border: none;
+	padding:0px;
+	margin: 0px;
+	background:transparent;
+}
+
+/*  IE6 */
+* html .iDoformInputInner div input {
+	padding: 4px;
+	margin: 0 0 0 0px;
+	height:17px;
+}
+/* Ie7 */
+*+ html .iDoformInputInner div input {
+	padding: 6px 0 0 0;
+	margin-left:-10px;
+	height:24px;
+}
+
+.iDoformSafari .iDoformInputInner div {
+	position: relative;
+	overflow: hidden;
+	margin:0px;
+}
+.iDoformSafari .iDoformInputInner div input {
+	background-color: none;
+	position: absolute;
+	height: 17px; 
+	padding:5px;
+}
+
+
+
+/* -------------
+ * Textarea
+ * ------------- */
+table.iDoformTextarea td#jqTransformTextarea-mm textarea{
+	font-size: 12px;
+	line-height: 16px;
+}
+
+table.iDoformTextarea td{
+font-size: 1px;
+line-height: 1px;
+width: 5px;
+height: 5px;
+margin: 0;
+padding: 0;
+}
+table.iDoformTextarea{}
+table.iDoformTextarea tr{
+/*border: 1px solid red;*/
+
+}
+table.iDoformTextarea textarea{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	background: none;
+}
+
+
+table.iDoformTextarea .iDoformSafariTextarea div {
+	position: relative;
+	overflow: hidden;
+	border: 0px solid red;
+}
+table.iDoformTextarea .iDoformSafariTextarea textarea{
+	background: none;
+	position: absolute;
+	top:-10px;
+	left:-10px;
+	padding: 10px 10px 10px 10px;
+	resize: none;
+}
+
+
+/* -------------
+ * Radios
+ * ------------- */
+.iDoformRadioWrapper {float: left;display:block;margin:0px 4px;	margin-top:5px;}
+.iDoformRadio {
+	background: transparent url(../shou_images/form/radio.gif) no-repeat center top;
+	vertical-align: middle;
+	font-size:1px;
+	height: 12px;
+	width: 12px;
+	display:block;/*display: -moz-inline-block;*/
+}
+
+
+/* -------------
+ * Checkboxes
+ * ------------- */
+span.iDoformCheckboxWrapper{
+	display:block;float:left;
+	margin-top:5px;
+}
+a.iDoformCheckbox {
+	background: transparent url(../shou_images/form/checkbox.gif) no-repeat center top;
+	vertical-align: middle;
+	font-size:1px;
+	height: 13px;
+	width: 13px;
+	display:block;/*display: -moz-inline-block;*/
+}
+
+/* -------------
+ * Checked - Used for both Radio and Checkbox
+ * ------------- */
+a.iDoformChecked { background-position: center bottom;}
+
+
+/* -------------
+ * Selects
+ * ------------- */
+.iDoformSelectWrapper {
+	width: 45px;
+	position:relative;
+	height: 27px;
+	border:1px solid #c6c6c6;
+	float:left;
+}
+
+.iDoformSelectWrapper div span {
+	
+	font-size: 12px;
+	float: none;
+	position: absolute;
+	white-space: nowrap;
+	height: 17px;
+	padding:5px;
+	line-height: 17px;
+	overflow: hidden;
+	cursor:pointer;
+	/*border: 1px solid #CCCCCC;*/
+/*	border-right: none;*/
+}
+
+.iDoformSelectWrapper  a.iDoformSelectOpen {
+	display: block;
+	position: absolute;
+	right: 0px;
+	width: 27px;
+	height: 27px;
+	background: url(../shou_images/form/select_right.gif) no-repeat center center;
+}
+
+.iDoformSelectWrapper ul {
+	position: absolute;
+	width: 43px;
+	top: 27px;
+	left: -1px;
+	list-style: none;
+	background-color: #FFF;
+	border: solid 1px #C6C6C6;
+	display: none;
+	margin: 0px;
+	padding: 0px;
+	height: 150px;
+	overflow: auto;
+	overflow-y: auto;
+	z-index:10;
+}
+
+.iDoformSelectWrapper ul a {
+	display: block;
+	padding: 5px;
+	text-decoration: none;
+	color:#333;
+	background-color: #FFF;
+	font-size: 12px;
+}
+
+.iDoformSelectWrapper ul a.selected {
+	background: #EDEDED;
+	color: #333;
+}
+
+.iDoformSelectWrapper ul a:hover, .iDoformSelectWrapper ul a.selected:hover {
+	background:#3582c4;
+	color: #fff;
+}
+
+/* -------------
+ * Hidden - used to hide the original form elements
+ * ------------- */
+.iDoformHidden {display: none;}
+
+.Spinner{display:block;overflow:hidden;width:58px;margin:9px auto;}
+.Spinner .Amount{width:14px;height:7px;padding:4px 5px;line-height:7px;font-size:11px;border-width:1px 0;border-style:solid;border-color:#d9d9d9;float:left;text-align:center;color:#565656;outline:0;}
+.Spinner a{display:inline-block;width:15px;height:15px;border:1px solid #d9d9d9;background-color:#f7f7f7;float:left;cursor:pointer;outline:0;}
+.Spinner a i{font-style:normal;background:url(../shou_images/form/BuynBtn.png) no-repeat;display:block;width:9px;height:9px;margin:3px;text-indent:999999%;overflow:hidden;}
+.Spinner .Decrease i{background-position:-9px -9px;}
+.Spinner .Increase i{background-position:-9px -0px;}
+.Spinner .DisDe i{background-position:-0px -9px;}
+.Spinner .DisIn i{background-position:-0px -0px;}

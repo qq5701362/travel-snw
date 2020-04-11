@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>jQuery订单系统样式</title>
+<link href="../css/shop_address_1.css" rel="stylesheet" type="text/css">
+<link href="../css/shop_address_2.css" rel="stylesheet" type="text/css">
+
+<script src="https://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+<script src="https://www.jq22.com/jquery/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="../js/shop_add_common.js"></script>
+<script type="text/javascript" src="../js/shop_add_form.js"></script>
+<script type="text/javascript" src="../js/shop_add_area.js"></script>
+
+
+<!--[if lte IE 6]>
+<script type="text/javascript" src="js/DD_belatedPNG_0.0.8a.js"></script>
+<script type="text/javascript">
+  DD_belatedPNG.fix('*');
+</script>
+<![endif]-->
+</head>
+
+<body>
+
+<div class="iDo-main">
+<form >
+	
+	<div class="iDo-basic">
+		<p class="iDo-info-p">
+			<span class="iDo-info-title">姓　　名：</span>
+			<span class="iDo-info-box"><input type="text" name="name" datatype="zh2-4" class="txt-len-1" nullmsg="请填写收货人姓名。"></span>
+			<span class="iDo-info-tips"><i><em>*</em>请填写收货人姓名。</i></span>
+			<span class="iDo-cl"></span>
+		</p>
+		<p class="iDo-info-p">
+			<span class="iDo-info-title">手　　机：</span>
+			<span class="iDo-info-box"><input type="text" datatype="m" name="mob" class="txt-len-1" nullmsg="请填写收货联系方式。"></span>
+			<span class="iDo-info-tips"><i><em>*</em>请填写收货联系方式。</i></span>
+			<span class="iDo-cl"></span>
+		</p>
+		<p class="iDo-info-p">
+			<span class="iDo-info-title">固定电话：</span>
+			<span class="iDo-info-box">
+				<input type="text" name="tel" class="txt-len-2"><b>-</b><input type="text" name="tel" class="txt-len-3">
+			</span>
+			<span class="iDo-info-tips"><i><em></em>（可选）区号-电话号码</i></span>
+			<span class="iDo-cl"></span>
+		</p>
+		<p class="iDo-info-p">
+			<span class="iDo-info-title">选择省市：</span>
+			<span class="iDo-info-box">
+				<label id="province"><select class="txt-len-4" id="iDo-province"><option>--请选择--</option></select></label><span class="iDo-sc"></span>
+				<label id="city"><select class="txt-len-5" id="iDo-city"><option>--请选择--</option></select></label><span class="iDo-sc"></span>
+				<label id="county"><select class="txt-len-6" id="iDo-county"><option>--请选择--</option></select></label>
+			</span>
+			<span class="iDo-info-tips"><i><em>*</em>请选择收货省市信息。</i></span>
+			<span class="iDo-cl"></span>
+		</p>
+		<p class="iDo-info-p">
+			<span class="iDo-info-title">详细地址：</span>
+			<span class="iDo-info-box"><input type="text" name="name" class="txt-len-7"></span>
+			<span class="iDo-info-tips"><i><em>*</em></i></span>
+			<span class="iDo-cl"></span>
+		</p>
+	</div>
+	<div class="iDo-details">
+		<p class="iDo-info-p">
+			<span class="iDo-info-title">付款方式：</span>
+			<span class="iDo-info-box">
+				<span class="iDo-pay"><input type="radio" id="iDo-pay-1" name="name" checked><label class="iDo-pay-1" for="iDo-pay-1">货到付款</label></span>
+				<span class="iDo-pay"><input type="radio" id="iDo-pay-2" name="name"><label class="iDo-pay-2" for="iDo-pay-2">支付宝付款</label></span>
+				<span class="iDo-pay"><input type="radio" id="iDo-pay-3" name="name"><label class="iDo-pay-3" for="iDo-pay-3">网银付款</label></span>
+			</span>
+			<span class="iDo-cl"></span>
+		</p>
+		<p class="iDo-info-p">
+			<span class="iDo-info-title">订单备注：</span>
+			<span class="iDo-info-box"><input type="text" name="name" class="txt-len-7"></span>
+			<span class="iDo-info-tips"><i><em>*</em></i></span>
+			<span class="iDo-cl"></span>
+		</p>
+		<p class="iDo-info-p">
+			<span class="iDo-info-title">验证码：</span>
+			<span class="iDo-info-box"><input type="text" name="name" class="txt-len-8"></span>
+			<span class="iDo-info-tips"><i><em>*</em>手机和固定电话请至少填一项。</i></span>
+			<span class="iDo-cl"></span>
+		</p>
+	</div>
+	<input id="" class="button" type="button" value="提交" >
+	<a href="../html/shop_cart.html"><input id="" class="button" type="button" value="返回购物车" ></a>
+</form>
+</div>
+</body>
+
+</body>
+</html>
