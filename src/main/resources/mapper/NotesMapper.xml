@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.snw.shop.product.dao.NotesDao" >
+    <resultMap id="BaseResultMap" type="com.snw.shop.product.entity.Notes" >
+        <id column="id" property="id" jdbcType="INTEGER" />
+        <result column="parentUserId" property="parentUserId" jdbcType="INTEGER" />
+        <result column="userId" property="userId" jdbcType="INTEGER" />
+        <result column="content" property="content" jdbcType="VARCHAR" />
+        <result column="noteStatus" property="noteStatus" jdbcType="VARCHAR" />
+        <result column="isAnonymous" property="isAnonymous" jdbcType="VARCHAR" />
+        <result column="agree" property="agree" jdbcType="INTEGER" />
+        <result column="createTime" property="createTime" jdbcType="TIMESTAMP" />
+        <result column="updateTime" property="updateTime" jdbcType="TIMESTAMP" />
+    </resultMap>
+    <sql id="Base_Column_List" >
+        id, parentUserId, userId, content, noteStatus, isAnonymous, agree, createTime, updateTime
+    </sql>
+    
+    <!-- 留言新增 -->
+    <insert id="addNote" parameterType="com.snw.shop.product.entity.Notes" >
+    	insert into notes
+        <trim prefix="(" suffix=")" suffixOverrides="," >
+            <if test="id != null" >
+                id,
+            </if>
+            <if test="parentUserId != null" >
+                parentUserId,
+            </if>
+            <if test="userId != null" >
+                userId,
+            </if>
+            <if test="content != null" >
+                content,
+            </if>
+            <if test="noteStatus != null" >
+                noteStatus,
+            </if>
+            <if test="isAnonymous != null" >
+                isAnonymous,
+            </if>
+            <if test="agree != null" >
+                agree,
+            </if>
+            <if test="createTime != null" >
+                createTime,
+            </if>
+            <if test="updateTime != null" >
+                updateTime,
+            </if>
+            
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides="," >
+            <if test="id != null" >
+                #{id,jdbcType=INTEGER},
+            </if>
+            <if test="parentUserId != null" >
+                #{parentUserId,jdbcType=INTEGER},
+            </if>
+            <if test="userId != null" >
+                #{userId,jdbcType=INTEGER},
+            </if>
+            <if test="content != null" >
+                #{content,jdbcType=VARCHAR},
+            </if>
+            <if test="noteStatus != null" >
+                #{noteStatus,jdbcType=VARCHAR},
+            </if>
+            <if test="isAnonymous != null" >
+                #{isAnonymous,jdbcType=VARCHAR},
+            </if>
+            <if test="agree != null" >
+                #{agree,jdbcType=INTEGER},
+            </if>
+            <if test="createTime != null" >
+                #{createTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="updateTime != null" >
+                #{updateTime,jdbcType=TIMESTAMP},
+            </if>
+            
+        </trim>
+    </insert>
+    
+    <!--只是把用户的状态修改为0  0：以删除，1：未删除，  2：已停用
+    <delete id="delete" parameterType="java.lang.Integer" >
+        update notes
+        set status='0'
+        where id = #{id,jdbcType=INTEGER}
+    </delete>-->
+    
+     <!-- 更新 
+    <update id="update" parameterType="com.snw.shop.product.entity.Notes" >
+        update notes
+            <set >
+	            <if test="parentUserId != null" >
+	                #{parentUserId,jdbcType=INTEGER},
+	            </if>
+	            <if test="userId != null" >
+	                #{userId,jdbcType=INTEGER},
+	            </if>
+	            <if test="content != null" >
+	                #{content,jdbcType=VARCHAR},
+	            </if>
+	            <if test="noteStatus != null" >
+	                #{noteStatus,jdbcType=VARCHAR},
+	            </if>
+	            <if test="isAnonymous != null" >
+	                #{isAnonymous,jdbcType=VARCHAR},
+	            </if>
+	            <if test="agree != null" >
+	                #{agree,jdbcType=INTEGER},
+	            </if>
+	            
+	            <if test="createTime != null" >
+	                #{createTime,jdbcType=TIMESTAMP},
+	            </if>
+	            
+	            <if test="updateTime != null" >
+	                #{updateTime,jdbcType=TIMESTAMP},
+	            </if>
+            </set>
+        where id = #{id,jdbcType=INTEGER}
+    </update>-->
+    
+    <!-- 根据ID查询 
+    <select id="getUser" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+        select 
+            <include refid="Base_Column_List" />
+        from notes
+        where id = #{id,jdbcType=INTEGER}
+    </select>-->
+    
+    <!-- 查询列表 
+  <select id="query"  parameterType="Map" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from notes
+    where  status != '0'
+      <if test="staff_id != null and staff_id!=''" >
+        and staff_id = #{staff_id,jdbcType=VARCHAR}
+      </if>
+      <if test="user_name != null and user_name!=''" >
+        and user_name = #{user_name,jdbcType=VARCHAR}
+      </if>
+     <if test="dept_id != null and dept_id!=''" >
+        and dept_id = #{dept_id,jdbcType=INTEGER}
+      </if>
+      <if test="user_type != null and user_type!=''" >
+        and user_type = #{user_type,jdbcType=VARCHAR}
+      </if>
+      <if test="status != null and status!=''" >
+        and status = #{status,jdbcType=INTEGER}
+      </if>
+      LIMIT #{startRow,jdbcType=INTEGER},#{pageSize,jdbcType=INTEGER}
+  </select>    -->
+    
+     <!-- 查询用户记录总数 
+  <select id="queryCount" parameterType="Map" resultType="Integer">
+    select count(id) from notes
+    where status != '0'
+      <if test="staff_id != null and staff_id!=''" >
+        and staff_id = #{staff_id,jdbcType=VARCHAR}
+      </if>
+      <if test="user_name != null and user_name!=''" >
+        and user_name = #{user_name,jdbcType=VARCHAR}
+      </if>
+     <if test="dept_id != null and dept_id!=''" >
+        and dept_id = #{dept_id,jdbcType=INTEGER}
+      </if>
+      <if test="user_type != null and user_type!=''" >
+        and user_type = #{user_type,jdbcType=VARCHAR}
+      </if>
+      <if test="status != null and status!=''" >
+        and status = #{status,jdbcType=INTEGER}
+      </if>
+  </select>-->
+  
+</mapper>

@@ -1,4 +1,4 @@
-package com.snw.product.dao;
+package com.snw.shop.product.dao;
 
 
 /**

@@ -25,7 +25,7 @@ public class User implements Serializable {
     
     private Integer parent_id;
     /**
-     * 工号
+     * 是否是管理员。0：不是管理员，1：是管理员
      */
     private Integer staff_id;
     
